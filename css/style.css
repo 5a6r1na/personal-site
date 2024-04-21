@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Varela Round", sans-serif;
+  line-height: 1.6;
+  margin: 0;
+}
+
+header {
+  height: 50px;
+  background-color: lightgrey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ---- Navigation ---- */
+.website a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black;
+  font-size: 0.95em;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+ul li a {
+  padding: 10px 15px;
+  color: black;
+  font-size: 0.95em;
+}
+
+.main-header a:hover {
+  color: brown;
+}
+
+/* ---- Welcome Message ---- */
+
+.banner {
+  background-color: lightblue;
+  color: black;
+  padding: 50px 0;
+  text-align: center;
+}
+
+/* ---- Section title ---- */
+.section-head {
+  color: black;
+  text-align: center;
+}
+
+/* ---- Content boxes ---- */
+.container1,
+.container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 60px;
+  column-gap: 15px;
+}
+
+.box1,
+.box2,
+.box3,
+.box4 {
+  height: 120px;
+  width: 100%;
+  background-color: lightgrey;
+  text-align: center;
+}
+
+/* ---- button ---- */
+.button {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  background-color: lightblue;
+  margin: 10px;
+  padding: 15px 10px;
+  border: 0px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: lightcoral;
+  color: white;
+}
+
+/* ---- media query ---- */
+@media (max-width: 769px) {
+  .main-header {
+    flex-direction: column;
+  }
+
+  .container1,
+  .container2 {
+    flex-direction: column;
+    margin: 0px 60px;
+  }
+  .box1,
+  .box2,
+  .box3,
+  .box4 {
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container1,
+  .container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 60px;
+    column-gap: 15px;
+  }
+  .box1,
+  .box2,
+  .box3,
+  .box4 {
+    height: 120px;
+    width: 532px;
+  }
+}
