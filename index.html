@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabrina Li - Personal Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="#about">About Me</a>
+                <a href="public/pages/projects.html">Projects</a>
+                <a href="#blog">Blog</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Updated Hero Section -->
+    <section class="hero">
+        <div class="hero-content container">
+            <img src="/public/img/IMG_3783.png" alt="Your Photo">
+            <div>
+                <h1>Hello!</h1>
+                <p>I'm Sabrina Li, a passionate technologist with a deep interest in problem-solving and
+                    creativity. I'm excited to share my work and journey with you.</p>
+                <div class="hero-buttons">
+                    <a href="#resume" class="btn-resume">Resume</a>
+                    <a href="#projects" class="btn-projects">Projects</a>
+                    <a href="#contact" class="btn-contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about container">
+        <h2>About Me</h2>
+        <p>Hello! I'm Sabrina Li, a passionate technologist with a deep interest in [Your Field]. After graduating with
+            a degree in [Your Degree], I worked on various projects that combine my love for problem-solving and
+            creativity. I believe in leveraging technology to solve real-world problems and make a meaningful impact.
+        </p>
+        <p>In addition to my technical skills, I enjoy writing essays and columns on topics that inspire me, from
+            innovation to the societal impacts of technology. In my free time, I explore [Your Hobbies] and am always on
+            the lookout for new learning opportunities.</p>
+    </section>
+
+    <!-- Projects Section with Cards -->
+    <section id="projects" class="projects container">
+        <div class="section-header">
+            <h2>Projects</h2>
+            <!-- <button class="read-more-btn">Read More</button> -->
+        </div>
+
+        <swiper-container class="mySwiper" navigation="true" pagination="true" space-between="10" slides-per-view="2">
+            <swiper-slide>
+                <div class="card">
+                    <!-- <img src="/public/img/project1.png" alt="Project 1 Image"> -->
+                    <h3>Eat Together</h3>
+                    <div class="project-tags">
+                        <span class="project-tag">Full-Stack</span>
+                        <span class="project-tag">System Design</span>
+                        <span class="project-tag">Web Design</span>
+                        <span class="skill-tag">JavaScript</span>
+                    </div>
+                    <p>
+                        This project aims to address key issues like resource wastage, uneven distribution, and the
+                        overemphasis on certain resources, fostering more effective and tailored support for the
+                        homeless
+                        community.</p>
+                    <a class="read-more-btn" href="../projects/eat-together.html" target="_blank">Read More</a>
+                    <a class="visit-site-btn" href="https://www.eat-together.homestreethometc.com/"
+                        target="_blank">Visit
+                        Site</a>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="card">
+                    <!-- <img src="project2-image.jpg" alt="Project 2 Image"> -->
+                    <h3>Dream Support</h3>
+                    <div class="project-tags">
+                        <span class="project-tag">Full-Stack</span>
+                        <span class="project-tag">System Design</span>
+                        <span class="project-tag">Web Design</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Java</span>
+                    </div>
+                    <p>In this class project, I collaborated with a team to develop [project description], focusing
+                        on [your
+                        contribution].</p>
+                    <a class="read-more-btn" href="../projects/dream-support.html" target="_blank">Read More</a>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="card">
+                    <!-- <img src="project2-image.jpg" alt="Project 2 Image"> -->
+
+                    <h3>Dream Support</h3>
+                    <div class="project-tags">
+                        <span class="project-tag">Full-Stack</span>
+                        <span class="project-tag">System Design</span>
+                        <span class="project-tag">Web Design</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Java</span>
+                    </div>
+                    <p>In this class project, I collaborated with a team to develop [project description], focusing
+                        on [your
+                        contribution].</p>
+                    <button class="read-more-btn">Read More</button>
+                </div>
+            </swiper-slide>
+        </swiper-container>
+        <!-- Custom navigation buttons -->
+        <div class="swiper-button-prev-unique"></div>
+        <div class="swiper-button-next-unique"></div>
+        <!-- <div class="card-grid">
+            <div class="card">
+                <h3>Eat Together</h3>
+                <div class="project-tags">
+                    <span class="project-tag">Full-Stack</span>
+                    <span class="project-tag">System Design</span>
+                    <span class="project-tag">Web Design</span>
+                    <span class="skill-tag">JavaScript</span>
+                </div>
+                <p>This project is a software solution designed to address [specific problem]. I developed this project
+                    using [Technologies].
+
+                    This project aims to address key issues like resource wastage, uneven distribution, and the
+                    overemphasis on certain resources, fostering more effective and tailored support for the homeless
+                    community.</p>
+                <a class="read-more-btn" href="public/projects/eat-together.html" target="_blank">Read More</a>
+                <a class="visit-site-btn" href="https://www.eat-together.homestreethometc.com/" target="_blank">Visit
+                    Site</a>
+            </div>
+
+            <div class="card">
+                <h3>Dream Support</h3>
+                <div class="project-tags">
+                    <span class="project-tag">Full-Stack</span>
+                    <span class="project-tag">System Design</span>
+                    <span class="project-tag">Web Design</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Java</span>
+                </div>
+                <p>In this class project, I collaborated with a team to develop [project description], focusing on [your
+                    contribution].</p>
+                <button class="read-more-btn">Read More</button>
+            </div>
+
+
+        </div> -->
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume container">
+        <h2>Resume</h2>
+        <p>I have a diverse background in [Your Field], having worked on a variety of projects both academically and
+            personally. My key skills include:</p>
+        <ul>
+            <li>Technical Skills: [Skill 1], [Skill 2], [Skill 3]</li>
+            <li>Problem-Solving: [Example of a problem you solved]</li>
+            <li>Project Management: [Details on a project you led or contributed to]</li>
+        </ul>
+        <br>
+        <p><a href="/public/others/resume.pdf" download class="btn" target="_blank">Download My Resume</a></p>
+    </section>
+
+    <!-- Blog Section with Cards -->
+    <section id="blog" class="blog container">
+        <div class="section-header">
+            <h2>Articles</h2>
+            <button class="read-more-btn">Read More</button>
+        </div>
+        <div class="card-grid">
+            <div class="card">
+                <!-- <img src="blog1-image.jpg" alt="Blog Post 1 Image"> -->
+                <h3>Exploring the Intersection of Technology and Society</h3>
+                <p>In this essay, I delve into how emerging technologies are reshaping the way we live and work,
+                    discussing automation and AI.</p>
+            </div>
+            <div class="card">
+                <!-- <img src="blog2-image.jpg" alt="Blog Post 2 Image"> -->
+                <h3>The Role of Creativity in Problem-Solving</h3>
+                <p>This piece explores how creativity plays a crucial role in developing innovative solutions to complex
+                    challenges.</p>
+            </div>
+            <div class="card">
+                <!-- <img src="blog3-image.jpg" alt="Blog Post 3 Image"> -->
+                <h3>The Future of Innovation</h3>
+                <p>Looking ahead, I explore what the future holds for technological innovation and how we can prepare
+                    for the challenges it brings.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact container">
+        <div style="flex: 1; padding-right: 40px;">
+            <h2>WORK WITH ME</h2>
+            <p>Fill out this quick form to help me get to know you better! I'll follow up within 2 days to schedule a
+                call if it feels like a good fit.</p>
+
+            <!-- Optional Contact Info Section -->
+            <div class="contact-info">
+                <div>
+                    <!-- <img src="/path/to/icon.png" alt="Location Icon">s -->
+                    <span>Taipei, Taiwan</span>
+                </div>
+                <div>
+                    <a href="mailto:chiawenli.1219@gmail.com">chiawenli.1219@gmail.com</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <form action="https://formsubmit.co/90ab2b3e626c853abcfea866bd7cda43" method="POST">
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+                </div>
+                <div>
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Sabrina Li. All rights reserved.</p>
+    </footer>
+
+    <script language="javascript">
+        var mySwiper = document.querySelector('swiper-container');
+
+        // Set the custom navigation buttons using the "setAttribute" method
+        mySwiper.setAttribute('navigation-next-el', '.swiper-button-next-unique');
+        mySwiper.setAttribute('navigation-prev-el', '.swiper-button-prev-unique');
+
+        // Optionally, customize swiper further
+        mySwiper.autoplay = { delay: 4000 };
+        mySwiper.loop = true;
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+</body>
+
+</html>
