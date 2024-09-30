@@ -29,7 +29,7 @@ a {
   color: #43abc9;
 }
 
-/* Updated Container Class */
+/* Container Class */
 .container {
   width: 85%;
   max-width: 1200px;
@@ -76,10 +76,9 @@ nav a:hover {
   width: 100%;
   max-width: 1200px; /* Limit width for hero section */
   margin: 0 auto;
-  padding: 0 20px; /* Reduce padding */
+  padding: 0 20px;
 }
 
-/* Adjust the size of the image */
 .hero img {
   width: 400px;
   height: 400px;
@@ -159,11 +158,12 @@ nav a:hover {
   background-color: #43abc9;
 }
 
+/* Section Titles */
+
 section {
   padding: 50px 0;
 }
 
-/* Section Titles with Read More Button */
 .section-header {
   display: flex;
   justify-content: space-between;
@@ -171,13 +171,17 @@ section {
   margin-bottom: 20px;
 }
 
+/* Read More Button */
 .read-more-btn {
   background-color: #e94b3c;
   color: #f1e9da;
-  padding: 12px 15px;
+  padding: 10px 15px;
   border: none;
   border-radius: 20px;
+  text-align: center;
   cursor: pointer;
+  display: inline-block;
+  margin-top: 10px;
   font-size: 0.9em;
 }
 
@@ -185,13 +189,17 @@ section {
   background-color: #d43c2a;
 }
 
+/* Visit Site Button */
 .visit-site-btn {
   background-color: #f1a339;
   color: #f1e9da;
-  padding: 12px 15px;
+  padding: 10px 15px;
   border: none;
   border-radius: 20px;
+  text-align: center;
   cursor: pointer;
+  display: inline-block;
+  margin-top: 10px;
   font-size: 0.9em;
 }
 
@@ -327,7 +335,7 @@ swiper-slide {
 .contact {
   background-color: #fffefe80;
   border-radius: 20px;
-  padding: 30px;
+  padding: 25px 60px;
   margin-bottom: 30px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
