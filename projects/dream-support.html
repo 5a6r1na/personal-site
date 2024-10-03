@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project - Dream Support</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #000f08;
+        }
+
+        .section p {
+            font-size: 1.2em;
+            line-height: 1.8em;
+            color: #333;
+            text-align: left;
+        }
+
+        .section li {
+            font-size: 1.2em;
+            line-height: 1.8em;
+            color: #333;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .projects-hero {
+            margin-bottom: 40px;
+            flex-direction: column;
+        }
+
+        .project-tags {
+            width: 85%;
+            margin: 0 auto;
+            max-width: 1200px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .sections-label {
+            margin-right: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000f08;
+            color: #a6c3c9;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .section-title {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .section-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .text-content {
+            flex: 1;
+            padding: 20px;
+            color: #000f08;
+        }
+
+        .image-content {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .image-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+        }
+
+        .reverse {
+            flex-direction: row-reverse;
+        }
+
+        /* Switch styling */
+        .switch-container {
+            display: flex;
+            align-items: end;
+            margin-bottom: 20px;
+            margin-right: 20px;
+        }
+
+        .switch-label {
+            font-size: 1em;
+            margin-right: 10px;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 25px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: 0.4s;
+            border-radius: 25px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 20px;
+            width: 20px;
+            left: 4px;
+            bottom: 2.5px;
+            background-color: white;
+            transition: 0.4s;
+            border-radius: 50%;
+        }
+
+        input:checked+.slider {
+            background-color: #000f08;
+        }
+
+        input:checked+.slider:before {
+            transform: translateX(25px);
+        }
+
+        /* Hide the original content by default */
+        .original-content-design,
+        .original-content-future {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="../../index.html">Home</a>
+                <a href="#about">About Me</a>
+                <a href="../pages/projects.html">Projects</a>
+                <a href="#blog">Blog</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section for Project -->
+    <section class="projects-hero">
+        <div class="container">
+            <div class="hero-left">
+                <h1>Dream Support</h1>
+            </div>
+            <div class="hero-right">
+                <p>A case management platform aimed at automating and streamlining social workers' workloads, empowering
+                    them to make data-driven decisions and focus on direct client support.</p>
+            </div>
+        </div>
+
+        <div class="project-tags">
+            <span class="sections-label">Sections: </span>
+            <a href="#background" class="project-tag">Background</a>
+            <a href="#design" class="project-tag">Design</a>
+            <a href="#implementation" class="project-tag">Implementation</a>
+            <a href="#future" class="project-tag">Future</a>
+            <a href="#closing" class="project-tag">Closing</a>
+        </div>
+    </section>
+
+    <!-- Background Section -->
+    <section id="background" class="section story container">
+        <div class="section-title">
+            <h2>Background</h2>
+        </div>
+
+        <div class="original-content-background">
+            <p>The Dream Support project was developed to alleviate a critical challenge faced by social workers: the
+                overwhelming
+                administrative workload that hindered their ability to provide direct care. The need to repeatedly input
+                case
+                data across platforms led to inefficiencies and delays in providing support.
+            </p>
+            <p>The project stemmed from two core issues: fragmented social support programs with varying application
+                requirements and the reliance on manual, paper-based processes. This made it difficult for social
+                workers
+                to track programs and forced them to spend hours on repetitive tasks instead of focusing on their
+                clients.
+            </p>
+            <p>Dream Support streamlines these processes by centralizing both case and program management and
+                automating tasks. With
+                features like data-driven program recommendations, it also allows social workers to dedicate more focus
+                to
+                meaningful interventions. In its
+                first phase, the platform aims to handle up to 1,000 active cases across 32 NGOs, with the potential to
+                scale
+                for long-term growth and greater impact.</p>
+        </div>
+    </section>
+
+
+    <!-- Design Section -->
+    <section id="design" class="section story container">
+        <div class="section-title">
+            <h2>Design</h2>
+            <div class="switch-container">
+                <span class="switch-label">Swipe for Full Story: </span>
+                <label class="switch">
+                    <input type="checkbox" id="toggleDesign">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Condensed Content -->
+        <div class="condensed-content-design">
+            <p>The Dream Support platform was designed with two primary goals in mind: ease of use and automation. Given
+                the varied needs of social workers across multiple NGOs, it was essential to create an interface that
+                was intuitive yet powerful enough to handle large volumes of data.</p>
+            <ul>
+                <li><strong>Case Management Module:</strong> This module organizes client information across three tabs:
+                    case profiles, background details, and application records, streamlining data entry and tracking
+                    progress. It also leverages the recommendation engine to suggest suitable programs based on case
+                    history.</li>
+                <li><strong>Social Support Program Management Module:</strong> Social workers can create and manage
+                    programs in one place, generate pre-filled forms using stored client data, and keep programs
+                    updated. Form automation significantly reduces repetitive administrative tasks, allowing social
+                    workers to focus on client support.</li>
+            </ul>
+        </div>
+
+        <div class="original-content-design">
+            <p>The design of the Dream Support platform focuses on ease of use and automation, tailored to reduce the
+                administrative burden on social workers. The platform is divided into two main modules: Case Management
+                and
+                Social Support Program Management, each serving a specific purpose in streamlining workflows.</p>
+
+            <div class="section-content row">
+                <div class="text-content">
+                    <ul>
+                        <li><strong>Case Management Module:</strong> This module is split into three tabs:</li>
+                        <ul>
+                            <li><strong>Case Profile Tab:</strong> Social workers create and store essential client
+                                information, which is reused across applications, minimizing repetitive data entry.</li>
+                            <li><strong>Case Background Tab:</strong> Captures detailed background information, such as
+                                income and education, feeding into the platform’s recommendation system. The
+                                recommendation engine analyzes past cases to suggest programs most likely to succeed
+                                based on similar case histories.</li>
+                            <li><strong>Application Record Tab:</strong> Tracks the history of all applications,
+                                including dates, programs applied to, and outcomes, providing a clear view of each
+                                case's progress.</li>
+                        </ul>
+                    </ul>
+                </div>
+                <div class="image-content">
+                    <img src="/images/project1.png" alt="Case Management Module">
+                </div>
+            </div>
+
+            <div class="section-content row">
+                <div class="text-content">
+                    <ul>
+                        <li><strong>Social Support Program Management Module:</strong> This module allows social workers
+                            to create and track programs in a centralized place, simplifying program management:</li>
+                        <ul>
+                            <li><strong>Program Creation:</strong> Social workers can input program details and upload
+                                forms, ensuring all programs are organized and accessible for future applications.</li>
+                            <li><strong>Pre-Filled Forms:</strong> Using stored client data, the platform generates
+                                pre-filled forms for any registered program, saving time on paperwork. Automation of
+                                form generation reduces repetitive administrative tasks, freeing up time for more
+                                client-centered support.</li>
+                        </ul>
+                    </ul>
+                </div>
+                <div class="image-content">
+                    <img src="/images/project1.png" alt="Program Management Module">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Implementation Section -->
+    <section id="implementation" class="section story container">
+        <div class="section-title">
+            <h2>Implementation</h2>
+        </div>
+        <!-- Original Content -->
+        <p>The project was implemented using a full-stack approach, centered around building a robust, scalable platform
+            capable of handling
+            up to 1,000 cases in its first phase across 32 NGOs. The development
+            process was independently led from start to finish, including pitching the concept to NGOs, designing the
+            system’s architecture, coding, testing, and final deployment.</p>
+        <ul>
+            <li><strong>Front-End:</strong> Vue.js was chosen for its reactive nature and ease of integration, providing
+                a seamless, responsive user interface for social workers. Its component-based architecture also ensures
+                future updates can be implemented smoothly without disrupting existing functionality.</li>
+            <li><strong>Back-End:</strong> Java was used to ensure a stable and secure environment for managing the
+                platform’s core logic. The robustness and reliability of Java allow the platform to handle a large
+                number of concurrent users and complex case workflows with minimal downtime.</li>
+            <li><strong>Database:</strong> PostgreSQL was implemented to handle relational data, ensuring efficient data
+                storage and retrieval. Its scalability and support for complex queries make it well-suited for managing
+                the growing volume of case and program data within the platform.</li>
+        </ul>
+    </section>
+
+    <!-- Future Section -->
+    <section id="future" class="section story container">
+        <div class="section-title">
+            <h2>Future</h2>
+            <div class="switch-container">
+                <span class="switch-label">Swipe for Full Story: </span>
+                <label class="switch">
+                    <input type="checkbox" id="toggleFuture">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Condensed Content -->
+        <div class="condensed-content-future">
+            <p>Phase 2 of the Dream Support project will introduce two key features:<br></p>
+            <ul>
+                <li><strong>Chatbot for Social Issues:</strong> A chatbot will offer instant responses to questions on
+                    poverty, providing tailored, field-specific information to assist social workers.</li>
+                <li><strong>Support Ticketing Hub:</strong> This system will allow NGOs to share information
+                    and request
+                    resources, fostering greater collaboration and resource distribution across the alliance.</li>
+            </ul>
+            <p>These features aim to enhance the platform’s collaborative and informative functions, improving overall
+                efficiency and support delivery.</p>
+        </div>
+
+        <!-- Original Content -->
+        <div class="original-content-future">
+            <p>As Dream Support evolves, we are planning several key features for Phase 2, aimed at expanding the
+                platform’s functionality and fostering greater collaboration between social workers and NGOs.</p>
+            <ul>
+                <li><strong>Chatbot for Social Issues:</strong> A chatbot will provide instant responses to questions
+                    related to social issues, particularly in the realm of poverty. This tool will serve as a quick
+                    reference for social workers, offering them tailored, field-specific information to better assist
+                    their clients. While developing a comprehensive and accurate answer pool will take time, the chatbot
+                    is expected to significantly enhance the resources available to social workers by delivering useful,
+                    contextually relevant responses.</li>
+                <li><strong>Support Ticketing Hub:</strong> A ticketing feature will be introduced to
+                    facilitate better collaboration among NGOs within the LearningFromThePoor alliance. Social workers
+                    will be able to raise tickets for cases requiring extra support, whether it's resource-related or
+                    handling a particularly challenging case. Other groups within the alliance can accept these tickets,
+                    promoting a cooperative environment where resources and expertise can be shared efficiently. The
+                    ticketing system will be flexible, allowing social workers to categorize and tag their requests.
+                    These tickets will also serve as valuable internal data for future analysis, helping NGOs understand
+                    trends in case needs and resource allocation.</li>
+            </ul>
+            <p>These upcoming features will enhance Dream Support's role as both a management tool and a collaborative
+                platform, ensuring that social workers have the tools and support they need to deliver the most
+                impactful care.</p>
+        </div>
+    </section>
+
+    <!-- Closing Section -->
+    <section id="closing" class="section story container">
+        <h2>Closing</h2>
+        <p>Dream Support has significantly eased the administrative burden on social workers, allowing them to
+            dedicate more time to direct case support. By automating form generation and offering data-driven
+            recommendations, the platform
+            has transformed how NGOs manage cases, resulting in improved outcomes for clients.</p>
+        <p>Looking into the future, Phase 2 will introduce the Support Ticketing Hub and chatbot, enhancing
+            collaboration between
+            NGOs and
+            providing instant access to tailored information. With these features, Dream Support is well-positioned to
+            scale and continue to drive meaningful improvements to meet growing needs across the NGO network.</p>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Sabrina. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Toggle functionality for design section
+        document.getElementById("toggleDesign").addEventListener("change", function () {
+            const condensedContent = document.querySelector(".condensed-content-design");
+            const originalContent = document.querySelector(".original-content-design");
+            if (this.checked) {
+                condensedContent.style.display = "none";
+                originalContent.style.display = "block";
+            } else {
+                condensedContent.style.display = "block";
+                originalContent.style.display = "none";
+            }
+        });
+
+        // Toggle functionality for future section
+        document.getElementById("toggleFuture").addEventListener("change", function () {
+            const condensedContent = document.querySelector(".condensed-content-future");
+            const originalContent = document.querySelector(".original-content-future");
+            if (this.checked) {
+                condensedContent.style.display = "none";
+                originalContent.style.display = "block";
+            } else {
+                condensedContent.style.display = "block";
+                originalContent.style.display = "none";
+            }
+        });
+
+    </script>
+</body>
+
+</html>
