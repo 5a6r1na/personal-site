@@ -590,8 +590,8 @@ swiper-slide {
   resize: vertical;
 }
 
-.contact-form input[type="submit"] {
-  width: 30%;
+.contact-form button {
+  width: 100%;
   padding: 15px 30px;
   border-radius: 25px;
   background-color: #e94b3c;
@@ -601,13 +601,13 @@ swiper-slide {
   cursor: pointer;
 }
 
-.contact-form input[type="submit"]:hover {
+.contact-form button:hover {
   background-color: #d43c2a;
 }
 
 .contact-submit {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 footer {
@@ -749,8 +749,8 @@ footer a:hover {
   }
 
   .hero-buttons a {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     font-size: 0.9em;
   }
 
@@ -861,13 +861,15 @@ footer a:hover {
     text-align: left;
   }
 
-  .contact-form input[type="submit"] {
-    width: 50%;
-  }
-
   .contact-form input,
   .contact-form textarea {
     width: 90%;
+    padding: 10px;
+    margin: 5px 0;
+  }
+
+  .contact-form button {
+    padding: 12px 20px;
   }
 
   /* Footer adjustments */
