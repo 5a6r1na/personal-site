@@ -9,35 +9,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
         rel="stylesheet">
-
     <style>
-        .section h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #000f08;
-        }
-
-        .section p {
-            font-size: 1.2em;
-            line-height: 1.8em;
-            color: #333;
-            text-align: left;
-        }
-
-        .section li {
-            font-size: 1.2em;
-            line-height: 1.8em;
-            color: #333;
-            text-align: left;
-            margin-bottom: 20px;
-        }
-
-        .projects-hero {
-            margin-bottom: 40px;
-            flex-direction: column;
-        }
-
         .project-tags {
             width: 85%;
             margin: 0 auto;
@@ -45,123 +17,6 @@
             display: flex;
             justify-content: flex-end;
             align-items: center;
-        }
-
-        .sections-label {
-            margin-right: 10px;
-        }
-
-
-        /* Footer */
-        footer {
-            background-color: #000f08;
-            color: #a6c3c9;
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        .section-title {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .section-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            width: 100%;
-        }
-
-        .text-content {
-            flex: 1;
-            padding: 20px;
-            color: #000f08;
-        }
-
-        .image-content {
-            flex: 1;
-            padding-right: 20px;
-        }
-
-        .image-content img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .row {
-            display: flex;
-            align-items: center;
-        }
-
-        .reverse {
-            flex-direction: row-reverse;
-        }
-
-        /* Switch styling */
-        .switch-container {
-            display: flex;
-            align-items: end;
-            margin-bottom: 20px;
-            margin-right: 20px;
-        }
-
-        .switch-label {
-            font-size: 1em;
-            margin-right: 10px;
-        }
-
-        .switch {
-            position: relative;
-            display: inline-block;
-            width: 50px;
-            height: 25px;
-        }
-
-        .switch input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-
-        .slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #ccc;
-            transition: 0.4s;
-            border-radius: 25px;
-        }
-
-        .slider:before {
-            position: absolute;
-            content: "";
-            height: 20px;
-            width: 20px;
-            left: 4px;
-            bottom: 2.5px;
-            background-color: white;
-            transition: 0.4s;
-            border-radius: 50%;
-        }
-
-        input:checked+.slider {
-            background-color: #000f08;
-        }
-
-        input:checked+.slider:before {
-            transform: translateX(25px);
-        }
-
-        /* Hide the original content by default */
-        .original-content-design,
-        .original-content-future {
-            display: none;
         }
     </style>
 </head>
@@ -265,7 +120,7 @@
 
                 <li><strong>Mobile-First Design:</strong> Special attention was given to mobile accessibility, as many
                     users may rely on shared devices or public internet access. The design ensures the platform
-                    functions seamlessly across all device sizes, from desktops to mobile phones.</li>
+                    functions seamlessly across desktops and mobile phones.</li>
 
                 <li><strong>NGO and Public Usability:</strong> The interface was designed to be intuitive for NGO
                     administrators managing resources and public users seeking them, ensuring both groups can
@@ -294,7 +149,7 @@
                     </ul>
                 </div>
                 <div class="image-content">
-                    <img src="/images/project1.png" alt="Background Image">
+                    <img src="/images/eat-header.png" alt="Background Image">
                 </div>
             </div>
             <div class="section-content row">
@@ -323,31 +178,64 @@
                     </ul>
                 </div>
                 <div class="image-content">
-                    <img src="/images/project1.png" alt="Background Image">
+                    <img src="/images/eat-cal.png" alt="Background Image">
+                    <img src="/images/eat-cal-hover.png" alt="Background Image">
                 </div>
             </div>
-            <ul>
-                <li><strong>Map Section:</strong> The map displays distribution locations with both map and street views
-                    using a carousel.
-                    This is particularly useful for both distributors and the homeless community, as it helps them
-                    navigate
-                    to the correct locations. This section minimizes confusion and logistical issues like overcrowding,
-                    incorrect distribution points, and resource mismanagement. The top three gathering locations were
-                    chosen
-                    based on where the homeless community most frequently resides, ensuring that resource distribution
-                    is
-                    highly effective.</li>
+            <div class="section-content row">
+                <div class="text-content">
+                    <ul>
+                        <li><strong>Map Section:</strong> The map displays distribution locations with both map and
+                            street
+                            views
+                            using a carousel.
+                            This is particularly useful for both distributors and the homeless community, as it helps
+                            them
+                            navigate
+                            to the correct locations. This section minimizes confusion and logistical issues like
+                            overcrowding,
+                            incorrect distribution points, and resource mismanagement. The top three gathering locations
+                            were
+                            chosen
+                            based on where the homeless community most frequently resides, ensuring that resource
+                            distribution
+                            is
+                            highly effective.</li>
+                    </ul>
+                </div>
+                <div class="image-content">
+                    <img src="/images/eat-map.png" alt="Background Image">
+                </div>
+            </div>
 
-                <li><strong>Footer Section:</strong> The footer provides basic contact details, social links, and
-                    donation
-                    opportunities for
-                    HomeStreetHome Taiwan, ensuring continued support and communication between NGOs and the public.
-                </li>
-            </ul>
-            <p>In addition, the platform was designed to adapt seamlessly to desktop, tablet, and mobile versions,
-                ensuring it remains accessible for users, particularly the homeless community, who may share mobile
-                devices and rely on community internet access.
-            </p>
+            <div class="section-content row">
+                <div class="text-content">
+                    <ul>
+                        <li><strong>Footer Section:</strong> The footer provides basic contact details, social links,
+                            and
+                            donation
+                            opportunities for
+                            HomeStreetHome Taiwan, ensuring continued support and communication between NGOs and the
+                            public.
+                        </li>
+                    </ul>
+                </div>
+                <div class="image-content">
+                    <img src="/images/eat-footer.png" alt="Background Image">
+                </div>
+            </div>
+            <div class="section-content row">
+                <div class="text-content">
+                    <p>In addition, the platform was designed to adapt seamlessly to desktop and mobile versions,
+                        ensuring it remains accessible for users, particularly the homeless community, who may share
+                        mobile
+                        devices and rely on community internet access.
+                    </p>
+                </div>
+                <div class="image-content">
+                    <img src="/images/eat-mobile.png" style="width: 60%;" alt="Background Image">
+                </div>
+            </div>
         </div>
     </section>
 
