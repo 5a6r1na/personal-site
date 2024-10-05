@@ -874,8 +874,9 @@ footer a:hover {
 
   .contact-form {
     width: 100%;
-    max-width: 400px;
+    max-width: 220px;
     margin: 0 auto;
+    text-align: left;
   }
 
   .contact-form button {
