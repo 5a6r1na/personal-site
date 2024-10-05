@@ -857,15 +857,24 @@ footer a:hover {
   }
 
   /* Adjust the form size */
-  .contact-form {
-    text-align: left;
-  }
-
   .contact-form input,
   .contact-form textarea {
-    width: 90%;
-    padding: 10px;
-    margin: 5px 0;
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    box-sizing: border-box;
+  }
+
+  .contact-form textarea {
+    resize: vertical;
+  }
+
+  .contact-form {
+    width: 100%;
+    margin: 0 auto;
   }
 
   .contact-form button {
