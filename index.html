@@ -9,7 +9,40 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
         rel="stylesheet">
+    <style>
+        /* Keyframes for the typing effect */
+        @keyframes typing {
+            from {
+                width: 0;
+            }
 
+            to {
+                width: 100%;
+            }
+        }
+
+        /* Keyframes for the erasing effect */
+        @keyframes erasing {
+            from {
+                width: 100%;
+            }
+
+            to {
+                width: 0;
+            }
+        }
+
+        /* Styling for the typing text */
+        .typewriter {
+            font-family: 'Playfair Display', serif;
+            font-size: 3em;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 0;
+            animation: typing 4s steps(36, end);
+            animation-iteration-count: infinite;
+        }
+    </style>
 </head>
 
 <body>
@@ -25,12 +58,14 @@
         </div>
     </header>
 
+
+
     <!-- Updated Hero Section -->
     <section class="hero">
         <div class="hero-content container">
             <img src="images/hero.png" alt="Your Photo">
             <div>
-                <h1>Hello!</h1>
+                <h1 class="typewriter">Hello!</h1>
                 <p>I'm Sabrina Li, a passionate technologist with a deep interest in problem-solving and
                     creativity. I'm excited to share my work and journey with you.</p>
                 <div class="hero-buttons">
@@ -44,14 +79,14 @@
 
     <section id="about" class="about container">
         <h2>About Me</h2>
-        <p>Hello! I'm Sabrina Li, a passionate technologist with a deep interest in solving real-world problems. After
-            graduating with
-            a degree in Accounting, I worked on various projects that combine my love for problem-solving and
-            creativity. I believe in leveraging technology to solve real-world problems and make a meaningful impact.
+        <p>Sabrina Li is a passionate technologist with a deep interest in solving real-world problems. Her focus is on
+            using technology to tackle complex challenges and create solutions that have a meaningful impact.</p>
+        <p>When she’s not working on a project, Sabrina enjoys traveling, discovering new cuisines, and catching up on
+            movies. She is always eager to explore new experiences and perspectives, which often inspire fresh ideas.
         </p>
-        <p>In addition to my technical skills, I enjoy writing essays and columns on topics that inspire me, from
-            innovation to the societal impacts of technology. In my free time, I explore [Your Hobbies] and am always on
-            the lookout for new learning opportunities.</p>
+        <p>Her goal is to design tools and systems that enhance lives and promote equal opportunities, whether through
+            simplifying everyday tasks or addressing broader societal challenges. Sabrina believes that with the right
+            mindset and a blend of creativity and determination, every challenge holds a way forward.</p>
     </section>
 
     <!-- Projects Section with Cards -->
@@ -94,9 +129,8 @@
                         <span class="skill-tag">JavaScript</span>
                         <span class="skill-tag">Java</span>
                     </div>
-                    <p>In this class project, I collaborated with a team to develop [project description], focusing
-                        on [your
-                        contribution].</p>
+                    <p>A case management platform aimed at automating and streamlining social workers' workloads,
+                        empowering them to make data-driven decisions and focus on direct client support.</p>
                     <a class="read-more-btn" href="projects/dream-support.html" target="_blank">Read More</a>
                 </div>
             </swiper-slide>
@@ -127,16 +161,31 @@
     <!-- Resume Section -->
     <section id="resume" class="resume container">
         <h2>Resume</h2>
-        <p>I have a diverse background in [Your Field], having worked on a variety of projects both academically and
-            personally. My key skills include:</p>
+        <p>I have a diverse background in software development and project management, having worked on a variety of
+            projects professionally. Here are some of my key strengths:</p>
         <ul>
-            <li>Technical Skills: [Skill 1], [Skill 2], [Skill 3]</li>
-            <li>Problem-Solving: [Example of a problem you solved]</li>
-            <li>Project Management: [Details on a project you led or contributed to]</li>
+            <li><strong>Technical Skills:</strong> Experienced in designing scalable systems using JavaScript and Java.
+                Developed systems that integrate front-end, back-end, and external data sources to create
+                seamless user experiences.<br><br></li>
+
+            <li><strong>Problem-Solving:</strong> Managed and developed the "Eat Together" and "Dream Support"
+                platforms from start to finish. Both projects were independently led, involving full-stack development,
+                deployment, and close collaboration with NGOs to address social issues with impactful technology
+                solutions.<br><br></li>
+
+            <li><strong>Project Management & Leadership:</strong> Designed and led the development of the Renewable
+                Energy
+                Big Data Platform for the Japanese energy market, working with a team of developers. I created the
+                system
+                architecture and APIs, improving energy market transparency through real-time data analysis and
+                reporting.</li>
         </ul>
         <br>
         <p><a href="/public/others/resume.pdf" download class="btn" target="_blank">Download My Resume</a></p>
     </section>
+
+
+
 
     <!-- Blog Section with Cards -->
     <section id="blog" class="blog container">
@@ -169,9 +218,9 @@
     <!-- Contact Section -->
     <section id="contact" class="contact container">
         <div style="flex: 1; padding-right: 40px;">
-            <h2>WORK WITH ME</h2>
-            <p>Fill out this quick form to help me get to know you better! I'll follow up within 2 days to schedule a
-                call if it feels like a good fit.</p>
+            <h2>GET IN TOUCH</h2>
+            <p>Have a project in mind or looking for collaboration opportunities? Let’s connect and explore the
+                possibilities together!</p>
 
             <!-- Optional Contact Info Section -->
             <div class="contact-info">
@@ -182,6 +231,10 @@
                 <div>
                     <a href="mailto:chiawenli.1219@gmail.com">chiawenli.1219@gmail.com</a>
                 </div>
+                <!-- <div>
+                    <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> |
+                    <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
+                </div> -->
             </div>
         </div>
 
