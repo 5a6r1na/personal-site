@@ -9,35 +9,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
         rel="stylesheet">
-
     <style>
-        .section h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #000f08;
-        }
-
-        .section p {
-            font-size: 1.2em;
-            line-height: 1.8em;
-            color: #333;
-            text-align: left;
-        }
-
-        .section li {
-            font-size: 1.2em;
-            line-height: 1.8em;
-            color: #333;
-            text-align: left;
-            margin-bottom: 20px;
-        }
-
-        .projects-hero {
-            margin-bottom: 40px;
-            flex-direction: column;
-        }
-
         .project-tags {
             width: 85%;
             margin: 0 auto;
@@ -46,126 +18,13 @@
             justify-content: flex-end;
             align-items: center;
         }
-
-        .sections-label {
-            margin-right: 10px;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #000f08;
-            color: #a6c3c9;
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        .section-title {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .section-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            width: 100%;
-        }
-
-        .text-content {
-            flex: 1;
-            padding: 20px;
-            color: #000f08;
-        }
-
-        .image-content {
-            flex: 1;
-            padding-right: 20px;
-        }
-
-        .image-content img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .row {
-            display: flex;
-            align-items: center;
-        }
-
-        .reverse {
-            flex-direction: row-reverse;
-        }
-
-        /* Switch styling */
-        .switch-container {
-            display: flex;
-            align-items: end;
-            margin-bottom: 20px;
-            margin-right: 20px;
-        }
-
-        .switch-label {
-            font-size: 1em;
-            margin-right: 10px;
-        }
-
-        .switch {
-            position: relative;
-            display: inline-block;
-            width: 50px;
-            height: 25px;
-        }
-
-        .switch input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-
-        .slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #ccc;
-            transition: 0.4s;
-            border-radius: 25px;
-        }
-
-        .slider:before {
-            position: absolute;
-            content: "";
-            height: 20px;
-            width: 20px;
-            left: 4px;
-            bottom: 2.5px;
-            background-color: white;
-            transition: 0.4s;
-            border-radius: 50%;
-        }
-
-        input:checked+.slider {
-            background-color: #000f08;
-        }
-
-        input:checked+.slider:before {
-            transform: translateX(25px);
-        }
-
-        /* Hide the original content by default */
-        .original-content-design,
-        .original-content-future {
-            display: none;
-        }
     </style>
 </head>
 
 <body>
+    <!-- Back to Top Button -->
+    <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">Top</button>
+
     <!-- Header -->
     <header>
         <div class="container">
@@ -189,14 +48,19 @@
                     them to make data-driven decisions and focus on direct client support.</p>
             </div>
         </div>
-
-        <div class="project-tags">
-            <span class="sections-label">Sections: </span>
-            <a href="#background" class="project-tag">Background</a>
-            <a href="#design" class="project-tag">Design</a>
-            <a href="#implementation" class="project-tag">Implementation</a>
-            <a href="#future" class="project-tag">Future</a>
-            <a href="#closing" class="project-tag">Closing</a>
+        <div class="project-nav">
+            <div>
+                <a class="visit-site-btn" href="https://www.eat-together.homestreethometc.com/" target="_blank">Visit
+                    Site</a>
+            </div>
+            <div class="project-tags">
+                <span class="sections-label">Sections: </span>
+                <a href="#background" class="project-tag">Background</a>
+                <a href="#design" class="project-tag">Design</a>
+                <a href="#implementation" class="project-tag">Implementation</a>
+                <a href="#future" class="project-tag">Future</a>
+                <a href="#closing" class="project-tag">Closing</a>
+            </div>
         </div>
     </section>
 
@@ -409,35 +273,7 @@
     <footer>
         <p>&copy; 2024 Sabrina. All rights reserved.</p>
     </footer>
-
-    <script>
-        // Toggle functionality for design section
-        document.getElementById("toggleDesign").addEventListener("change", function () {
-            const condensedContent = document.querySelector(".condensed-content-design");
-            const originalContent = document.querySelector(".original-content-design");
-            if (this.checked) {
-                condensedContent.style.display = "none";
-                originalContent.style.display = "block";
-            } else {
-                condensedContent.style.display = "block";
-                originalContent.style.display = "none";
-            }
-        });
-
-        // Toggle functionality for future section
-        document.getElementById("toggleFuture").addEventListener("change", function () {
-            const condensedContent = document.querySelector(".condensed-content-future");
-            const originalContent = document.querySelector(".original-content-future");
-            if (this.checked) {
-                condensedContent.style.display = "none";
-                originalContent.style.display = "block";
-            } else {
-                condensedContent.style.display = "block";
-                originalContent.style.display = "none";
-            }
-        });
-
-    </script>
+    <script type="text/javascript" src="../script.js"></script>
 </body>
 
 </html>
