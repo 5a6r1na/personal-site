@@ -773,6 +773,12 @@ footer a:hover {
     flex-direction: column;
   }
 
+  .project-nav .project-tag {
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: center;
+  }
+
   .sections-label {
     margin-bottom: 10px;
   }
