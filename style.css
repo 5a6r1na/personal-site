@@ -691,6 +691,10 @@ footer a:hover {
     font-size: 0.9em; /* Make font size slightly smaller */
   }
 
+  nav {
+    text-align: center;
+  }
+
   h1 {
     font-size: 2.5em; /* Reduce heading size for mobile */
   }
