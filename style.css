@@ -71,12 +71,13 @@ nav a:hover {
   justify-content: center;
 }
 
-/* Adjusted Hero Container */
-.hero .container {
-  width: 100%;
-  max-width: 1200px; /* Limit width for hero section */
-  margin: 0 auto;
-  padding: 0 20px;
+/* Full intro for desktop */
+p.shorter-intro {
+  display: none;
+}
+
+p.full-intro {
+  display: block;
 }
 
 .hero img {
@@ -128,6 +129,12 @@ nav a:hover {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+}
+
+.project-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
 }
 
 .category h2 {
@@ -524,6 +531,11 @@ swiper-slide {
   font-size: 1.1em;
 }
 
+.contact-left {
+  flex: 1;
+  padding-right: 40px;
+}
+
 /* Contact Info Boxes */
 .contact-info {
   margin-top: 40px;
@@ -587,11 +599,15 @@ swiper-slide {
   border: none;
   font-size: 1.1em;
   cursor: pointer;
-  text-align: center;
 }
 
 .contact-form input[type="submit"]:hover {
   background-color: #d43c2a;
+}
+
+.contact-submit {
+  display: flex;
+  justify-content: flex-start;
 }
 
 footer {
@@ -641,4 +657,238 @@ footer a:hover {
     radial-gradient(var(--r) at bottom var(--_g));
   clip-path: polygon(0 50%, 100% 100%, 100% 0);
   background: linear-gradient(45deg, #fa6900, #c02942);
+}
+
+/* Back to Top Button Styles */
+#backToTopBtn {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  /* On top of other elements */
+  background-color: #000f08;
+  /* Background color */
+  color: #f1e9da;
+  /* Text color */
+  border: none;
+  padding: 12px;
+  border-radius: 30%;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#backToTopBtn:hover {
+  background-color: #555;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 768px) {
+  /* Global adjustments */
+  body {
+    font-size: 0.9em; /* Make font size slightly smaller */
+  }
+
+  h1 {
+    font-size: 2.5em; /* Reduce heading size for mobile */
+  }
+
+  h2,
+  h3 {
+    font-size: 1.8em;
+  }
+
+  /* Container class */
+  .container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  /* Hero Section */
+  .hero {
+    flex-direction: column;
+    padding: 100px 0;
+    text-align: center;
+  }
+
+  .hero-content {
+    flex-direction: column;
+  }
+
+  .hero img {
+    margin: 0 auto 20px auto;
+    width: 250px;
+    height: 250px;
+  }
+
+  .hero h1 {
+    font-size: 2.5em;
+  }
+
+  .hero p {
+    font-size: 1em;
+    line-height: 1.4em;
+  }
+
+  /* Shorter intro for mobile */
+  p.shorter-intro {
+    display: block;
+  }
+
+  p.full-intro,
+  div.full-intro {
+    display: none;
+  }
+
+  .hero-buttons {
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .hero-buttons a {
+    width: 30px;
+    height: 30px;
+    font-size: 0.9em;
+  }
+
+  /* Projects Hero Section */
+  .projects-hero {
+    padding: 60px 0;
+  }
+
+  .projects-hero .container {
+    align-items: center;
+  }
+
+  .project-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .project-tags {
+    flex-direction: column;
+  }
+
+  .sections-label {
+    margin-bottom: 10px;
+  }
+
+  .switch-container {
+    margin-right: 0px;
+  }
+
+  .project-tag {
+    margin-bottom: 5px;
+  }
+
+  .hero-left h1 {
+    font-size: 2.2em;
+  }
+
+  .hero-right p {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  /* Section adjustments */
+  section {
+    padding: 30px 0;
+  }
+
+  .section-header {
+    margin-bottom: 10px;
+  }
+
+  .about,
+  .projects,
+  .resume,
+  .blog,
+  .contact,
+  .story {
+    width: 80%;
+    padding: 15px;
+  }
+
+  .section h2 {
+    font-size: 2em;
+  }
+
+  .section p {
+    font-size: 1.1em;
+  }
+
+  .section li {
+    font-size: 1.1em;
+  }
+
+  .text-content {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .image-content {
+    display: none;
+  }
+
+  /* Contact Section */
+  .contact {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    margin: 25px 0px;
+    gap: 6px;
+  }
+
+  .contact-info div {
+    justify-content: center;
+    width: fit-content;
+  }
+
+  .contact-left {
+    flex: 1;
+    padding-right: 0px;
+  }
+
+  /* Adjust the form size */
+  .contact-form {
+    text-align: left;
+  }
+
+  .contact-form input[type="submit"] {
+    width: 50%;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 90%;
+  }
+
+  /* Footer adjustments */
+  footer {
+    padding: 10px 0;
+  }
+
+  /* Card Grid */
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  /* Swiper Section */
+  swiper-container {
+    height: 400px; /* Adjust height for smaller screens */
+  }
+
+  /* Back to Top Button */
+  #backToTopBtn {
+    bottom: 20px;
+    right: 20px;
+  }
 }
