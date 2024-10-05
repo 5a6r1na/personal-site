@@ -42,10 +42,24 @@
             animation: typing 4s steps(36, end);
             animation-iteration-count: infinite;
         }
+
+        /* Remove animation on mobile */
+        @media (max-width: 768px) {
+            .typewriter {
+                animation: none;
+                /* Disable animation */
+                width: auto;
+                /* Ensure the text displays properly */
+                white-space: normal;
+                /* Allow the text to wrap on smaller screens */
+            }
+        }
     </style>
 </head>
 
 <body>
+    <!-- Back to Top Button -->
+    <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">Top</button>
 
     <header>
         <div class="container">
@@ -58,16 +72,16 @@
         </div>
     </header>
 
-
-
-    <!-- Updated Hero Section -->
+    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content container">
             <img src="images/hero.png" alt="Your Photo">
             <div>
                 <h1 class="typewriter">Hello!</h1>
-                <p>I'm Sabrina Li, a passionate technologist with a deep interest in problem-solving and
-                    creativity. I'm excited to share my work and journey with you.</p>
+                <p>
+                    I'm Sabrina, a passionate technologist excited to share my work and journey with you.
+                </p>
+
                 <div class="hero-buttons">
                     <a href="#resume" class="btn-resume">Resume</a>
                     <a href="#projects" class="btn-projects">Projects</a>
@@ -76,6 +90,7 @@
             </div>
         </div>
     </section>
+
 
     <section id="about" class="about container">
         <h2>About Me</h2>
@@ -108,8 +123,8 @@
                         <span class="skill-tag">JavaScript</span>
                     </div>
                     <p>
-                        This project aims to address key issues like resource wastage, uneven distribution, and the
-                        overemphasis on certain resources, fostering more effective and tailored support for the
+                        This project aims to address key issues like resource wastage and uneven distribution, fostering
+                        more effective and tailored support for the
                         homeless
                         community.</p>
                     <a class="read-more-btn" href="projects/eat-together.html" target="_blank">Read More</a>
@@ -161,25 +176,34 @@
     <!-- Resume Section -->
     <section id="resume" class="resume container">
         <h2>Resume</h2>
-        <p>I have a diverse background in software development and project management, having worked on a variety of
+        <p class="full-intro">I have a diverse background in software development and project management, having worked
+            on a variety of
             projects professionally. Here are some of my key strengths:</p>
-        <ul>
-            <li><strong>Technical Skills:</strong> Experienced in designing scalable systems using JavaScript and Java.
-                Developed systems that integrate front-end, back-end, and external data sources to create
-                seamless user experiences.<br><br></li>
+        <p class="shorter-intro">I have a diverse background in software development and project management, having
+            worked
+            on a variety of
+            projects professionally.</p>
+        <div class="full-intro">
+            <ul>
+                <li><strong>Technical Skills:</strong> Experienced in designing scalable systems using JavaScript and
+                    Java.
+                    Developed systems that integrate front-end, back-end, and external data sources to create
+                    seamless user experiences.<br><br></li>
 
-            <li><strong>Problem-Solving:</strong> Managed and developed the "Eat Together" and "Dream Support"
-                platforms from start to finish. Both projects were independently led, involving full-stack development,
-                deployment, and close collaboration with NGOs to address social issues with impactful technology
-                solutions.<br><br></li>
+                <li><strong>Problem-Solving:</strong> Managed and developed the "Eat Together" and "Dream Support"
+                    platforms from start to finish. Both projects were independently led, involving full-stack
+                    development,
+                    deployment, and close collaboration with NGOs to address social issues with impactful technology
+                    solutions.<br><br></li>
 
-            <li><strong>Project Management & Leadership:</strong> Designed and led the development of the Renewable
-                Energy
-                Big Data Platform for the Japanese energy market, working with a team of developers. I created the
-                system
-                architecture and APIs, improving energy market transparency through real-time data analysis and
-                reporting.</li>
-        </ul>
+                <li><strong>Project Management & Leadership:</strong> Designed and led the development of the Renewable
+                    Energy
+                    Big Data Platform for the Japanese energy market, working with a team of developers. I created the
+                    system
+                    architecture and APIs, improving energy market transparency through real-time data analysis and
+                    reporting.</li>
+            </ul>
+        </div>
         <br>
         <p><a href="/public/others/resume.pdf" download class="btn" target="_blank">Download My Resume</a></p>
     </section>
@@ -217,18 +241,18 @@
 
     <!-- Contact Section -->
     <section id="contact" class="contact container">
-        <div style="flex: 1; padding-right: 40px;">
+        <div class="contact-left">
             <h2>GET IN TOUCH</h2>
             <p>Have a project in mind or looking for collaboration opportunities? Let’s connect and explore the
                 possibilities together!</p>
 
             <!-- Optional Contact Info Section -->
             <div class="contact-info">
-                <div>
+                <div class="contact-tag">
                     <!-- <img src="/path/to/icon.png" alt="Location Icon">s -->
                     <span>Taipei, Taiwan</span>
                 </div>
-                <div>
+                <div class="contact-tag">
                     <a href="mailto:chiawenli.1219@gmail.com">chiawenli.1219@gmail.com</a>
                 </div>
                 <!-- <div>
@@ -253,7 +277,7 @@
                     <label for="message">Message</label>
                     <textarea id="message" name="message" rows="3" placeholder="Your Message" required></textarea>
                 </div>
-                <div>
+                <div class="contact-submit">
                     <input type="submit" value="Submit">
                 </div>
             </form>
@@ -263,7 +287,6 @@
     <footer>
         <p>&copy; 2024 Sabrina Li. All rights reserved.</p>
     </footer>
-
     <script language="javascript">
         var mySwiper = document.querySelector('swiper-container');
 
@@ -274,8 +297,27 @@
         // Optionally, customize swiper further
         mySwiper.autoplay = { delay: 4000 };
         mySwiper.loop = true;
+
+        function updateSlidePerView() {
+            if (window.matchMedia("(max-width: 768px)").matches) {
+                mySwiper.setAttribute('slides-per-view', '1');
+            } else {
+                mySwiper.setAttribute('slides-per-view', '2');
+            }
+        }
+
+        // Run on window resize
+        window.addEventListener('resize', function () {
+            updateSlidePerView()
+        }
+        );
+
+        updateSlidePerView()
     </script>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script type="text/javascript" src="/script.js"></script>
+
 </body>
 
 </html>
