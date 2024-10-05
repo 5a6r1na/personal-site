@@ -171,6 +171,143 @@ section {
   margin-bottom: 20px;
 }
 
+/* Project Story Styles */
+
+.section h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #000f08;
+}
+
+.section p {
+  font-size: 1.2em;
+  line-height: 1.8em;
+  color: #333;
+  text-align: left;
+}
+
+.section li {
+  font-size: 1.2em;
+  line-height: 1.8em;
+  color: #333;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.projects-hero {
+  margin-bottom: 40px;
+  flex-direction: column;
+}
+
+.sections-label {
+  margin-right: 10px;
+}
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.text-content {
+  flex: 1;
+  padding: 20px;
+  color: #000f08;
+}
+
+.image-content {
+  flex: 1;
+  padding: 40px 20px 20px 20px;
+}
+
+.image-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.row {
+  display: flex;
+  align-items: flex-start;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Switch styling */
+.switch-container {
+  display: flex;
+  align-items: end;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.switch-label {
+  font-size: 1em;
+  margin-right: 10px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 25px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 2.5px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #000f08;
+}
+
+input:checked + .slider:before {
+  transform: translateX(25px);
+}
+
+/* Hide the original content by default */
+.original-content-design,
+.original-content-future {
+  display: none;
+}
+
 /* Read More Button */
 .read-more-btn {
   background-color: #e94b3c;
