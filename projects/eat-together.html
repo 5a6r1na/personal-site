@@ -22,6 +22,9 @@
 </head>
 
 <body>
+    <!-- Back to Top Button -->
+    <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">Top</button>
+
     <!-- Header -->
     <header>
         <div class="container">
@@ -46,13 +49,19 @@
                     community. </p>
             </div>
         </div>
-        <div class="project-tags">
-            <span class="sections-label">Sections: </span>
-            <a href="#background" class="project-tag">Background</a>
-            <a href="#design" class="project-tag">Design</a>
-            <a href="#implementation" class="project-tag">Implementation</a>
-            <a href="#future" class="project-tag">Future</a>
-            <a href="#closing" class="project-tag">Closing</a>
+        <div class="project-nav">
+            <div>
+                <a class="visit-site-btn" href="https://www.eat-together.homestreethometc.com/" target="_blank">Visit
+                    Site</a>
+            </div>
+            <div class="project-tags">
+                <span class="sections-label">Sections: </span>
+                <a href="#background" class="project-tag">Background</a>
+                <a href="#design" class="project-tag">Design</a>
+                <a href="#implementation" class="project-tag">Implementation</a>
+                <a href="#future" class="project-tag">Future</a>
+                <a href="#closing" class="project-tag">Closing</a>
+            </div>
         </div>
     </section>
 
@@ -338,33 +347,7 @@
         <p>&copy; 2024 Sabrina Li. All rights reserved.</p>
     </footer>
 
-    <script>
-        // Toggle functionality for design section
-        document.getElementById("toggleDesign").addEventListener("change", function () {
-            const condensedContent = document.querySelector(".condensed-content-design");
-            const originalContent = document.querySelector(".original-content-design");
-            if (this.checked) {
-                condensedContent.style.display = "none";
-                originalContent.style.display = "block";
-            } else {
-                condensedContent.style.display = "block";
-                originalContent.style.display = "none";
-            }
-        });
-
-        // Toggle functionality for future section
-        document.getElementById("toggleFuture").addEventListener("change", function () {
-            const condensedContent = document.querySelector(".condensed-content-future");
-            const originalContent = document.querySelector(".original-content-future");
-            if (this.checked) {
-                condensedContent.style.display = "none";
-                originalContent.style.display = "block";
-            } else {
-                condensedContent.style.display = "block";
-                originalContent.style.display = "none";
-            }
-        });
-    </script>
+    <script type="text/javascript" src="../script.js"></script>
 </body>
 
 </html>
