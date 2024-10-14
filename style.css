@@ -119,7 +119,7 @@ p.full-intro {
 /* Projects Hero Section */
 .projects-hero {
   background-color: #f6f2ebcb;
-  padding: 100px 0;
+  /* padding: 100px 0; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -241,11 +241,6 @@ section {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
-/* .infographic-content {
-  flex: 1;
-  padding: 40px 20px 20px 20px;
-} */
 
 .infographic-content img {
   width: 85%;
@@ -854,6 +849,10 @@ footer a:hover {
   }
 
   .image-content {
+    display: none;
+  }
+
+  .infographic-content {
     display: none;
   }
 
