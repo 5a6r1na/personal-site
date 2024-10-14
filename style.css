@@ -242,6 +242,14 @@ section {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.infographic-content img {
+  width: 85%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+
 .row {
   display: flex;
   align-items: flex-start;
