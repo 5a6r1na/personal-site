@@ -242,6 +242,11 @@ section {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* .infographic-content {
+  flex: 1;
+  padding: 40px 20px 20px 20px;
+} */
+
 .infographic-content img {
   width: 85%;
   height: auto;
