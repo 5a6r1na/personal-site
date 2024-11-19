@@ -71,6 +71,21 @@
         <div class="infographic-content">
             <img src="/personal-site/images/eat-infograph.png" alt="infographic Image">
         </div>
+        <swiper-container class="mySwiper" navigation="true" pagination="true" space-between="10" slides-per-view="1">
+            <swiper-slide>
+                <div class="infographic-content">
+                    <img src="/personal-site/images/eat-infograph.png" alt="infographic Image">
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="infographic-content">
+                    <img src="/personal-site/images/eat-infograph.png" alt="infographic Image">
+                </div>
+            </swiper-slide>
+        </swiper-container>
+        <!-- Custom navigation buttons -->
+        <div class="swiper-button-prev-unique"></div>
+        <div class="swiper-button-next-unique"></div>
     </section>
     <!--
     <section id="infographic" class="section story container">
@@ -360,6 +375,33 @@
     <footer>
         <p>&copy; 2024 Sabrina Li. All rights reserved.</p>
     </footer>
+    <script language="javascript">
+        var mySwiper = document.querySelector('swiper-container');
+
+        // Set the custom navigation buttons using the "setAttribute" method
+        mySwiper.setAttribute('navigation-next-el', '.swiper-button-next-unique');
+        mySwiper.setAttribute('navigation-prev-el', '.swiper-button-prev-unique');
+
+        // Optionally, customize swiper further
+        mySwiper.autoplay = { delay: 4000 };
+        mySwiper.loop = true;
+
+        function updateSlidePerView() {
+            if (window.matchMedia("(max-width: 768px)").matches) {
+                mySwiper.setAttribute('slides-per-view', '1');
+            } else {
+                mySwiper.setAttribute('slides-per-view', '2');
+            }
+        }
+
+        // Run on window resize
+        window.addEventListener('resize', function () {
+            updateSlidePerView()
+        }
+        );
+
+        updateSlidePerView()
+    </script>
 
     <script type="text/javascript" src="../script.js"></script>
 </body>
