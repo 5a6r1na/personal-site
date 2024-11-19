@@ -386,21 +386,21 @@
         mySwiper.autoplay = { delay: 4000 };
         mySwiper.loop = true;
 
-        function updateSlidePerView() {
-            if (window.matchMedia("(max-width: 768px)").matches) {
-                mySwiper.setAttribute('slides-per-view', '1');
-            } else {
-                mySwiper.setAttribute('slides-per-view', '2');
-            }
-        }
+        // function updateSlidePerView() {
+        //     if (window.matchMedia("(max-width: 768px)").matches) {
+        //         mySwiper.setAttribute('slides-per-view', '1');
+        //     } else {
+        //         mySwiper.setAttribute('slides-per-view', '2');
+        //     }
+        // }
 
         // Run on window resize
-        window.addEventListener('resize', function () {
-            updateSlidePerView()
-        }
-        );
+        // window.addEventListener('resize', function () {
+        //     updateSlidePerView()
+        // }
+        // );
 
-        updateSlidePerView()
+        // updateSlidePerView()
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
