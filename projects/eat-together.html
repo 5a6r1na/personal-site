@@ -4,406 +4,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project - Eat Together</title>
+    <title>Eat Together Sabrina Li</title>
     <link rel="stylesheet" type="text/css" href="../style.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
-        rel="stylesheet">
-    <style>
-        .project-tags {
-            width: 85%;
-            margin: 0 auto;
-            max-width: 1200px;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Back to Top Button -->
-    <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">Top</button>
+    <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">↑</button>
 
-    <!-- Header -->
     <header>
         <div class="container">
             <nav>
-                <a href="../index.html">Home</a>
-                <!-- <a href="#about">About Me</a> -->
-                <a href="../pages/projects.html">Projects</a>
-                <!-- <a href="#blog">Blog</a> -->
+                <a href="../index.html" class="nav-logo">SABRINA LI</a>
+                <div class="nav-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../index.html#projects">Projects</a>
+                    <a href="../index.html#contact">Contact</a>
+                </div>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section for Project -->
+    <!-- Project Hero -->
     <section class="projects-hero">
         <div class="container">
+            <p class="hero-label" style="padding-top:0; margin-bottom:16px;">PROJECT 01</p>
             <div class="hero-left">
                 <h1>Eat Together</h1>
             </div>
             <div class="hero-right">
-                <p>A project that aims to address key issues like resource wastage, uneven distribution, and the
-                    overemphasis on certain resources, fostering more effective and tailored support for the homeless
-                    community. </p>
+                <p>A platform addressing resource wastage, uneven distribution, and the overemphasis on certain resources, fostering more effective and tailored support for the homeless community.</p>
             </div>
-            <div>
-                <a class="visit-site-btn" href="https://www.eat-together.homestreethometc.com/" target="_blank">Visit
-                    Site</a>
+            <div style="margin-top: 20px;">
+                <a class="visit-site-btn" href="https://www.eat-together.homestreethometc.com/" target="_blank">Visit Site →</a>
             </div>
-        </div>
-        <!-- <div class="project-nav">
-            <div>
-                <a class="visit-site-btn" href="https://www.eat-together.homestreethometc.com/" target="_blank">Visit
-                    Site</a>
+
+            <!-- Metadata Row -->
+            <div class="project-meta">
+                <div class="meta-item">
+                    <p class="meta-label">Role</p>
+                    <p class="meta-value">Full-Stack Developer<br>& Designer</p>
+                </div>
+                <div class="meta-item">
+                    <p class="meta-label">Stack</p>
+                    <p class="meta-value">Vue.js · Firebase<br>JavaScript</p>
+                </div>
+                <div class="meta-item">
+                    <p class="meta-label">Type</p>
+                    <p class="meta-value">NGO Platform<br>Web Application</p>
+                </div>
+                <div class="meta-item">
+                    <p class="meta-label">Impact</p>
+                    <p class="meta-value">Recognized by Taichung<br>City Government</p>
+                </div>
             </div>
-            <div class="project-tags">
-                <span class="sections-label">Sections: </span>
+
+            <div class="project-nav" style="margin-top: 24px;">
+                <span class="sections-label">Sections:</span>
                 <a href="#background" class="project-tag">Background</a>
                 <a href="#design" class="project-tag">Design</a>
                 <a href="#implementation" class="project-tag">Implementation</a>
                 <a href="#future" class="project-tag">Future</a>
                 <a href="#closing" class="project-tag">Closing</a>
             </div>
-        </div> -->
-
-        <div class="infographic-content">
-            <img src="/personal-site/images/eat-infograph.png" alt="infographic Image">
         </div>
-        <!-- <swiper-container class="mySwiper" navigation="true" pagination="true" space-between="10" slides-per-view="1">
-            <swiper-slide>
-                <div class="infographic-content">
-                    <img src="/personal-site/images/eat-infograph.png" alt="infographic Image">
-                </div>
-            </swiper-slide>
-            <swiper-slide>
-                <div class="infographic-content">
-                    <img src="/personal-site/images/eat-infograph.png" alt="infographic Image">
-                </div>
-            </swiper-slide>
-        </swiper-container> -->
-        <!-- Custom navigation buttons -->
-        <!-- <div class="swiper-button-prev-unique"></div>
-        <div class="swiper-button-next-unique"></div> -->
     </section>
-    <!--
-    <section id="infographic" class="section story container">
-        <div class="infographic-content">
-            <img src="/personal-site/images/eat-infograph.png" alt="infographic Image">
-        </div>
-    </section> -->
 
-    <!-- Background Section -->
+    <!-- Background -->
     <section id="background" class="section story container">
         <div class="section-title">
             <h2>Background</h2>
-
         </div>
-
-        <!-- Condensed Content -->
-
-        <!-- Original Content -->
-        <div class="original-content-background">
-            <p>The project, titled Eat Together, was developed to address critical issues faced by the homeless
-                community,
-                particularly resource wastage, uneven distribution, and the overemphasis on certain resources. These
-                inefficiencies often led to an imbalance in how support was provided, leaving some individuals
-                underserved
-                while others received excess.<br>The inspiration behind this initiative came from
-                collaborative research with HomeStreetHome, which highlighted these gaps in resource management
-                and
-                distribution. The project aimed to create a more tailored and efficient solution to
-                ensure
-                that resources reached those in need in a balanced manner. <br>By working closely with NGOs, the
-                project
-                sought to align technological solutions with
-                the
-                real-world needs of homeless individuals, making the process of receiving and distributing resources
-                more
-                streamlined and impactful.
-            </p>
+        <div class="section-content row">
+            <div class="text-content">
+                <p>The project was developed to address critical issues faced by the homeless community, particularly resource wastage, uneven distribution, and the overemphasis on certain resources. These inefficiencies often led to an imbalance in how support was provided, leaving some individuals underserved while others received excess.</p>
+                <p>The inspiration came from collaborative research with HomeStreetHome, which highlighted these gaps in resource management and distribution. By working closely with NGOs, the project sought to align technological solutions with the real-world needs of homeless individuals, making the process of receiving and distributing resources more streamlined and impactful.</p>
+            </div>
+            <div class="image-content">
+                <img src="/personal-site/images/eat-infograph.png" alt="Eat Together infographic overview">
+            </div>
         </div>
-
     </section>
 
-
-    <!-- Design Section -->
+    <!-- Design -->
     <section id="design" class="section story container">
         <div class="section-title">
             <h2>Design</h2>
-            <div class="switch-container">
-                <span class="switch-label">Swipe for Full Story: </span>
-                <label class="switch">
-                    <input type="checkbox" id="toggleDesign">
-                    <span class="slider"></span>
-                </label>
+        </div>
+
+        <p>The platform is divided into four sections: header, calendar, map, and footer, each serving a specific function in the resource distribution workflow.</p>
+
+        <div class="section-content row" style="margin-top: 32px;">
+            <div class="text-content">
+                <p class="resume-item-label" style="margin-bottom: 10px;">HEADER</p>
+                <p>Welcomes users with a dynamic flip animation showcasing the project's title, slogan, and purpose, designed to make a strong first impression and convey the core mission of efficient and equitable resource distribution.</p>
+            </div>
+            <div class="image-content">
+                <img src="/personal-site/images/eat-header.png" alt="Header section">
             </div>
         </div>
 
-        <!-- Condensed Content -->
-        <div class="condensed-content-design">
-            <p>The design of the Eat Together platform was centered on ease of use and accessibility for both NGO
-                administrators and the homeless community. The following key design elements were implemented:</p>
-
-            <ul>
-                <li><strong>Calendar View:</strong> The core feature, developed using FullCalendar.js, displays
-                    resources by location, type, and time. Users can easily hover over events to see details such as
-                    resource
-                    type, quantity, and provider information.</li>
-
-                <li><strong>Map Integration:</strong> The map section uses a carousel view to display street-level
-                    images of distribution points, making it easier for users to locate resources. This feature helps
-                    avoid logistical challenges and overcrowding at distribution locations.</li>
-
-                <li><strong>Mobile-First Design:</strong> Special attention was given to mobile accessibility, as many
-                    users may rely on shared devices or public internet access. The design ensures the platform
-                    functions seamlessly across desktops and mobile phones.</li>
-
-                <li><strong>NGO and Public Usability:</strong> The interface was designed to be intuitive for NGO
-                    administrators managing resources and public users seeking them, ensuring both groups can
-                    efficiently interact with the platform.</li>
-            </ul>
-
+        <div class="section-content row">
+            <div class="text-content">
+                <p class="resume-item-label" style="margin-bottom: 10px;">CALENDAR</p>
+                <p>Built with FullCalendar.js, the central feature displays registered resources by time, date, and location. Users hover over events to see resource type, quantity, location, and provider. A sidebar lists events by resource category so distributors can spot oversupplied or undersupplied items at a glance.</p>
+            </div>
+            <div class="image-content">
+                <img src="/personal-site/images/eat-cal.png" alt="Calendar view" style="margin-bottom: 12px;">
+                <img src="/personal-site/images/eat-cal-hover.png" alt="Calendar hover state">
+            </div>
         </div>
 
-        <!-- Original Content -->
-        <div class="original-content-design">
-            <p>The design of the Eat Together platform was developed with a strong focus on usability, accessibility,
-                and responsiveness, particularly to accommodate users from both NGO administrators and the general
-                public. The platform is divided into distinct sections: the header, calendar, map, and footer, each
-                serving a specific function.</p>
+        <div class="section-content row">
+            <div class="text-content">
+                <p class="resume-item-label" style="margin-bottom: 10px;">MAP</p>
+                <p>Displays distribution locations with both map and street views via a carousel. The top three gathering spots were chosen based on where the homeless community most frequently resides, minimizing confusion, overcrowding, and logistical issues at distribution points.</p>
+            </div>
+            <div class="image-content">
+                <img src="/personal-site/images/eat-map.png" alt="Map view">
+            </div>
+        </div>
 
-            <div class="section-content row">
-                <div class="text-content">
-                    <ul>
-                        <li><strong>Header Section:</strong> This section welcomes users with a dynamic flip animation
-                            showcasing
-                            the project’s
-                            title, slogan, and purpose. The design here is meant to make a strong first impression and
-                            convey
-                            the
-                            project’s core mission of efficient and equitable resource distribution.</li>
-                    </ul>
-                </div>
-                <div class="image-content">
-                    <img src="/personal-site/images/eat-header.png" alt="Background Image">
-                </div>
+        <div class="section-content row">
+            <div class="text-content">
+                <p class="resume-item-label" style="margin-bottom: 10px;">FOOTER &amp; MOBILE</p>
+                <p>The footer provides contact details, social links, and donation opportunities for HomeStreetHome Taiwan. The entire platform was designed mobile-first, as many users rely on shared devices and public internet access.</p>
             </div>
-            <div class="section-content row">
-                <div class="text-content">
-                    <ul>
-                        <li><strong>Calendar Section:</strong> As the central feature of the platform, the calendar was
-                            designed
-                            using
-                            FullCalendar.js. It displays registered resources based on the time, date, and location of
-                            their
-                            distribution. Users can hover over events to see detailed information, including resource
-                            type,
-                            quantity, location, and provider. <br><br>The sidebar lists events by resource category,
-                            allowing
-                            users
-                            to
-                            easily identify oversupplied or undersupplied resources. The calendar design incorporates
-                            tabs
-                            that
-                            allow users to switch between different distribution locations. By integrating these
-                            features,
-                            the
-                            calendar section ensures that both distributors and recipients can efficiently manage and
-                            access
-                            resources.</li>
-                    </ul>
-                </div>
-                <div class="image-content">
-                    <img src="/personal-site/images/eat-cal.png" alt="Background Image">
-                    <img src="/personal-site/images/eat-cal-hover.png" alt="Background Image">
-                </div>
-            </div>
-            <div class="section-content row">
-                <div class="text-content">
-                    <ul>
-                        <li><strong>Map Section:</strong> The map displays distribution locations with both map and
-                            street
-                            views
-                            using a carousel.
-                            This is particularly useful for both distributors and the homeless community, as it helps
-                            them
-                            navigate
-                            to the correct locations. This section minimizes confusion and logistical issues like
-                            overcrowding,
-                            incorrect distribution points, and resource mismanagement. The top three gathering locations
-                            were
-                            chosen
-                            based on where the homeless community most frequently resides, ensuring that resource
-                            distribution
-                            is
-                            highly effective.</li>
-                    </ul>
-                </div>
-                <div class="image-content">
-                    <img src="/personal-site/images/eat-map.png" alt="Background Image">
-                </div>
-            </div>
-
-            <div class="section-content row">
-                <div class="text-content">
-                    <ul>
-                        <li><strong>Footer Section:</strong> The footer provides basic contact details, social links,
-                            and
-                            donation
-                            opportunities for
-                            HomeStreetHome Taiwan, ensuring continued support and communication between NGOs and the
-                            public.
-                        </li>
-                    </ul>
-                </div>
-                <div class="image-content">
-                    <img src="/personal-site/images/eat-footer.png" alt="Background Image">
-                </div>
-            </div>
-            <div class="section-content row">
-                <div class="text-content">
-                    <p>In addition, the platform was designed to adapt seamlessly to desktop and mobile versions,
-                        ensuring it remains accessible for users, particularly the homeless community, who may share
-                        mobile
-                        devices and rely on community internet access.
-                    </p>
-                </div>
-                <div class="image-content">
-                    <img src="/personal-site/images/eat-mobile.png" style="width: 60%;" alt="Background Image">
-                </div>
+            <div class="image-content">
+                <img src="/personal-site/images/eat-footer.png" alt="Footer section" style="margin-bottom: 12px;">
+                <img src="/personal-site/images/eat-mobile.png" style="width: 60%;" alt="Mobile view">
             </div>
         </div>
     </section>
 
-    <!-- Implementation Section -->
+    <!-- Implementation -->
     <section id="implementation" class="section story container">
         <div class="section-title">
             <h2>Implementation</h2>
         </div>
-        <!-- Original Content -->
-        <p>The project was implemented using a full-stack approach, focusing on scalability and operational
-            effectiveness for both NGO administrators and public users in real-world environments. The development
-            process was independently led from start to finish, including pitching the concept to NGOs, designing the
-            system’s architecture, coding, testing, and final deployment.</p>
+        <p>Independently led from start to finish, pitching the concept to NGOs, designing the system architecture, coding, testing, and final deployment.</p>
         <ul>
-            <li><strong>Front-End:</strong> Vue.js was selected for its flexibility, ease of integration, and reactive
-                capabilities, allowing for a seamless and responsive user experience. This framework was critical in
-                ensuring that users, from NGOs to the general public, could navigate the platform effortlessly across
-                devices.</li>
-
-            <li><strong>Back-End:</strong> Firebase was chosen for hosting and database management due to its smooth
-                integration with Vue.js and its ability to scale alongside the platform’s growing user base. Firebase
-                provided a reliable back-end solution without requiring complex server management.</li>
+            <li><strong>Front-End:</strong> Vue.js for its flexibility, ease of integration, and reactive capabilities, ensuring a seamless responsive experience across all devices.</li>
+            <li><strong>Back-End:</strong> Firebase for hosting and database management, chosen for its smooth integration with Vue.js and ability to scale alongside a growing user base without complex server management.</li>
         </ul>
     </section>
 
-
-
-    <!-- Future Section -->
+    <!-- Future -->
     <section id="future" class="section story container">
         <div class="section-title">
             <h2>Future</h2>
-            <div class="switch-container">
-                <span class="switch-label">Swipe for Full Story: </span>
-                <label class="switch">
-                    <input type="checkbox" id="toggleFuture">
-                    <span class="slider"></span>
-                </label>
-            </div>
         </div>
-
-        <!-- Condensed Content -->
-        <div class="condensed-content-future">
-            <p>Phase 2 of the "Eat Together" project will introduce two key features:<br></p>
-            <ul>
-                <li><strong>Demand Registry:</strong> A new form will allow the homeless community to list their most
-                    urgent needs, which will be displayed in a sidebar for better resource distribution.</li>
-                <li><strong>Location Pinning:</strong> The homeless can voluntarily pin their locations on a map,
-                    helping medical and social services provide targeted follow-up care.</li>
-            </ul>
-            <p> These features were delayed due to the city government's involvement, which expanded the project’s
-                scope. Ongoing research and feedback will shape their integration, further enhancing the platform’s
-                community impact. </p>
-        </div>
-        <!-- Original Content -->
-        <div class="original-content-future">
-            <p>As the "Eat Together" project continues to evolve, we have identified two key features for future
-                implementation, set to be introduced in Phase 2:<br></p>
-            <ul>
-                <li><strong>Demand Registry for the Homeless Community:</strong> Alongside the current resource registry
-                    form for
-                    distributors, a new form will allow the homeless community to communicate their specific needs
-                    directly. This "demand registry" will be visible in a sidebar, providing an intuitive snapshot of
-                    the most urgent resources required by the community. By clearly displaying the needs of the
-                    homeless, we aim to foster a more efficient and balanced distribution system that responds directly
-                    to these demands.</li>
-                <li><strong>Location Pinning for Street Services:</strong> To improve street medical care and social
-                    services, Phase 2
-                    will introduce a feature allowing the homeless community to pin their locations on the map. This
-                    will facilitate follow-up medical treatments, ongoing social support, and outreach programs. The
-                    feature will be voluntary, ensuring privacy while enabling social care providers to better target
-                    their efforts.</li>
-            </ul>
-            <p>
-                These features were initially postponed due to the expanded project scope following the city
-                government’s
-                involvement, which has broadened the platform’s potential impact. Discussions are ongoing to align the
-                platform with the government’s objectives. Meanwhile, field research and user feedback will guide the
-                integration of these features into the existing system. While Phase 1 established a strong foundation,
-                Phase 2 will further enhance the platform’s community-focused and personalized impact.
-            </p>
-        </div>
+        <p>Phase 2 will introduce two key features, currently in research and planning following the city government's expanded involvement:</p>
+        <ul>
+            <li><strong>Demand Registry:</strong> A form allowing the homeless community to list their most urgent needs directly, displayed in a sidebar so distributors can see real-time demand alongside available supply.</li>
+            <li><strong>Location Pinning:</strong> An optional feature allowing the homeless community to pin their locations on the map, enabling medical and social services to provide targeted follow-up care while respecting privacy.</li>
+        </ul>
     </section>
 
-    <!-- Closing Section -->
+    <!-- Closing -->
     <section id="closing" class="section story container">
-        <h2>Closing</h2>
-        <p>Eat Together has garnered attention from local governmental bodies,
-            including the Taichung City Government and the Social Affairs Bureau. These discussions have highlighted the
-            platform’s potential not only to address immediate challenges but also to shape public policy and urban
-            management by optimizing resource distribution processes.</p>
-        <p>As the platform moves into Phase 2, it remains flexible and scalable, poised to deepen its impact through
-            enhanced communication between the homeless community and service providers. By building on the strong
-            foundation established in Phase 1, Eat Together is well-positioned to drive meaningful change in both
-            resource management and public welfare, ensuring continued support for the more vulnerable populations.</p>
+        <div class="section-title">
+            <h2>Closing</h2>
+        </div>
+        <p>Eat Together has garnered attention from local governmental bodies including the Taichung City Government and the Social Affairs Bureau highlighting the platform's potential not only to address immediate challenges but also to shape public policy and urban management through optimized resource distribution.</p>
+        <p>As the platform moves into Phase 2, it remains flexible and scalable, poised to deepen its impact through enhanced communication between the homeless community and service providers.</p>
     </section>
 
-
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Sabrina Li. All rights reserved.</p>
+        <div class="container footer-inner">
+            <span>© 2026 Sabrina Li. All rights reserved.</span>
+            <span>Illinois, United States</span>
+        </div>
     </footer>
-    <script language="javascript">
-        var mySwiper = document.querySelector('swiper-container');
 
-        // Set the custom navigation buttons using the "setAttribute" method
-        mySwiper.setAttribute('navigation-next-el', '.swiper-button-next-unique');
-        mySwiper.setAttribute('navigation-prev-el', '.swiper-button-prev-unique');
-
-        // Optionally, customize swiper further
-        mySwiper.autoplay = { delay: 4000 };
-        mySwiper.loop = true;
-
-        // function updateSlidePerView() {
-        //     if (window.matchMedia("(max-width: 768px)").matches) {
-        //         mySwiper.setAttribute('slides-per-view', '1');
-        //     } else {
-        //         mySwiper.setAttribute('slides-per-view', '2');
-        //     }
-        // }
-
-        // Run on window resize
-        // window.addEventListener('resize', function () {
-        //     updateSlidePerView()
-        // }
-        // );
-
-        // updateSlidePerView()
-    </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <script type="text/javascript" src="../script.js"></script>
 </body>
 

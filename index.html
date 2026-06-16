@@ -4,300 +4,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sabrina Li - Personal Website</title>
+    <title>Sabrina Li</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
-        rel="stylesheet">
-    <style>
-        /* Keyframes for the typing effect */
-        @keyframes typing {
-            from {
-                width: 0;
-            }
-
-            to {
-                width: 100%;
-            }
-        }
-
-        /* Keyframes for the erasing effect */
-        @keyframes erasing {
-            from {
-                width: 100%;
-            }
-
-            to {
-                width: 0;
-            }
-        }
-
-        /* Styling for the typing text */
-        .typewriter {
-            font-family: 'Playfair Display', serif;
-            font-size: 3em;
-            overflow: hidden;
-            white-space: nowrap;
-            width: 0;
-            animation: typing 4s steps(36, end);
-            animation-iteration-count: infinite;
-        }
-
-        /* Remove animation on mobile */
-        @media (max-width: 768px) {
-            .typewriter {
-                animation: none;
-                /* Disable animation */
-                width: auto;
-                /* Ensure the text displays properly */
-                white-space: normal;
-                /* Allow the text to wrap on smaller screens */
-            }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Back to Top Button -->
-    <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">Top</button>
+    <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">↑</button>
 
     <header>
         <div class="container">
             <nav>
-                <a href="index.html">Home</a>
-                <!-- <a href="#about">About Me</a> -->
-                <a href="pages/projects.html">Projects</a>
-                <!-- <a href="#blog">Blog</a> -->
+                <a href="index.html" class="nav-logo">SABRINA LI</a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#contact">Contact</a>
+                </div>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="hero">
-        <div class="hero-content container">
-            <img src="images/hero.png" alt="Your Photo">
-            <div>
-                <h1 class="typewriter">Hello!</h1>
-                <p>
-                    I'm Sabrina, a passionate technologist excited to share my work and journey with you.
-                </p>
+        <div class="hero-inner container">
+            <div class="hero-text">
+                <p class="hero-label">FULL-STACK ENGINEER &amp; SYSTEM ARCHITECT</p>
+                <h1 class="hero-name">Sabrina<br>Li</h1>
+                <p class="hero-bio">M.S. student at UIUC building systems that scale. I care about technical depth, clean architecture, and technology that creates real-world impact.</p>
+                <p class="hero-current">Currently: Full Stack System Architect Intern at Kocree, Inc.</p>
+                <div class="hero-links">
+                    <a href="others/resume.pdf" download class="hero-link">Resume →</a>
+                    <a href="#projects" class="hero-link">Projects →</a>
+                    <a href="#contact" class="hero-link">Contact →</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero.png" alt="Sabrina Li">
+            </div>
+        </div>
+    </section>
 
-                <div class="hero-buttons">
-                    <a href="#resume" class="btn-resume">Resume</a>
-                    <a href="#projects" class="btn-projects">Projects</a>
-                    <a href="#contact" class="btn-contact">Contact</a>
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="container">
+            <p class="section-label">ABOUT</p>
+            <div class="about-content">
+                <h2 class="about-heading">Building systems<br>that matter.</h2>
+                <div class="about-text">
+                    <p>Sabrina Li is a technologist and engineer with a deep interest in building systems that solve real problems. She works across the full stack with a focus on scalable architecture and solutions that create meaningful impact.</p>
+                    <p>Outside of work, Sabrina finds inspiration in travel, new cuisines, and films. At the core of everything she builds is a belief that technology should enhance lives and promote equal opportunities, whether by simplifying everyday tasks or addressing broader societal challenges.</p>
                 </div>
             </div>
         </div>
     </section>
 
-
-    <section id="about" class="about container">
-        <h2>About Me</h2>
-        <p>Sabrina Li is a passionate technologist with a deep interest in solving real-world problems. Her focus is on
-            using technology to tackle complex challenges and create solutions that have a meaningful impact.</p>
-        <p>When she’s not working on a project, Sabrina enjoys traveling, discovering new cuisines, and catching up on
-            movies. She is always eager to explore new experiences and perspectives, which often inspire fresh ideas.
-        </p>
-        <p>Her goal is to design tools and systems that enhance lives and promote equal opportunities, whether through
-            simplifying everyday tasks or addressing broader societal challenges. Sabrina believes that with the right
-            mindset and a blend of creativity and determination, every challenge holds a way forward.</p>
-    </section>
-
-    <!-- Projects Section with Cards -->
-    <section id="projects" class="projects container">
-        <div class="section-header">
-            <h2>Projects</h2>
-            <!-- <button class="read-more-btn">Read More</button> -->
-        </div>
-
-        <swiper-container class="mySwiper" navigation="true" pagination="true" space-between="10" slides-per-view="2">
-            <swiper-slide>
+    <!-- Projects -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <p class="section-label">PROJECTS</p>
+            <div class="projects-grid">
                 <div class="card">
-                    <!-- <img src="/public/img/project1.png" alt="Project 1 Image"> -->
+                    <div class="project-number">01</div>
                     <h3>Eat Together</h3>
                     <div class="project-tags">
                         <span class="project-tag">Full-Stack</span>
                         <span class="project-tag">System Design</span>
                         <span class="project-tag">Web Design</span>
-                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Vue.js</span>
+                        <span class="skill-tag">Firebase</span>
                     </div>
-                    <p>
-                        This project aims to address key issues like resource wastage and uneven distribution, fostering
-                        more effective and tailored support for the
-                        homeless
-                        community.</p>
-                    <a class="read-more-btn" href="projects/eat-together.html">Read More</a>
-                    <a class="visit-site-btn" href="https://www.eat-together.homestreethometc.com/"
-                        target="_blank">Visit
-                        Site</a>
+                    <p>Collaborated with NGOs and the Taichung City Government to address resource wastage and uneven distribution for the homeless community. Recognized by local governmental bodies for its potential to shape public policy.</p>
+                    <div class="card-links">
+                        <a class="card-link" href="projects/eat-together.html">Case Study →</a>
+                        <a class="card-link" href="https://www.eat-together.homestreethometc.com/" target="_blank">Visit Site →</a>
+                    </div>
                 </div>
-            </swiper-slide>
-            <swiper-slide>
                 <div class="card">
-                    <!-- <img src="project2-image.jpg" alt="Project 2 Image"> -->
+                    <div class="project-number">02</div>
                     <h3>Dream Support</h3>
                     <div class="project-tags">
                         <span class="project-tag">Full-Stack</span>
                         <span class="project-tag">System Design</span>
                         <span class="project-tag">Web Design</span>
-                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Vue.js</span>
                         <span class="skill-tag">Java</span>
+                        <span class="skill-tag">PostgreSQL</span>
                     </div>
-                    <p>A case management platform aimed at automating and streamlining social workers' workloads,
-                        empowering them to make data-driven decisions and focus on direct client support.</p>
-                    <a class="read-more-btn" href="projects/dream-support.html">Read More</a>
+                    <p>Scalable case management platform enabling faster, personalized assistance for 1,000+ active cases across 32 NGOs. Data-driven recommendations empower social workers to make more informed decisions.</p>
+                    <div class="card-links">
+                        <a class="card-link" href="projects/dream-support.html">Case Study →</a>
+                    </div>
                 </div>
-            </swiper-slide>
-        </swiper-container>
-        <!-- Custom navigation buttons -->
-        <div class="swiper-button-prev-unique"></div>
-        <div class="swiper-button-next-unique"></div>
+            </div>
+        </div>
     </section>
 
-    <!-- Resume Section -->
-    <section id="resume" class="resume container">
-        <h2>Resume</h2>
-        <p class="full-intro">I have a diverse background in software development and project management, having worked
-            on a variety of
-            projects professionally. Here are some of my key strengths:</p>
-        <p class="shorter-intro">I have a diverse background in software development and project management, having
-            worked
-            on a variety of
-            projects professionally.</p>
-        <div class="full-intro">
-            <ul>
-                <li><strong>Technical Skills:</strong> Experienced in designing scalable systems using JavaScript and
-                    Java.
-                    Developed systems that integrate front-end, back-end, and external data sources to create
-                    seamless user experiences.<br><br></li>
-
-                <li><strong>Problem-Solving:</strong> Managed and developed the "Eat Together" and "Dream Support"
-                    platforms from start to finish. Both projects were independently led, involving full-stack
-                    development,
-                    deployment, and close collaboration with NGOs to address social issues with impactful technology
-                    solutions.<br><br></li>
-
-                <li><strong>Project Management & Leadership:</strong> Designed and led the development of the Renewable
-                    Energy
-                    Big Data Platform for the Japanese energy market, working with a team of developers. I created the
-                    system
-                    architecture and APIs, improving energy market transparency through real-time data analysis and
-                    reporting.</li>
-            </ul>
+    <!-- Skills -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <p class="section-label">SKILLS</p>
+            <div class="skills-grid">
+                <div>
+                    <p class="skill-group-label">Languages</p>
+                    <p class="skill-list">JavaScript · TypeScript · Java · Python · C++ · HTML · CSS</p>
+                </div>
+                <div>
+                    <p class="skill-group-label">Frontend</p>
+                    <p class="skill-list">React · Vue · SvelteKit · JSP · Figma</p>
+                </div>
+                <div>
+                    <p class="skill-group-label">Backend</p>
+                    <p class="skill-list">Spring Boot · Node.js · Express · NestJS · FastAPI · RESTful API · WebSocket</p>
+                </div>
+                <div>
+                    <p class="skill-group-label">Databases</p>
+                    <p class="skill-list">MySQL · PostgreSQL · MongoDB · Redis · Kafka · OpenSearch · Debezium</p>
+                </div>
+                <div>
+                    <p class="skill-group-label">Infrastructure</p>
+                    <p class="skill-list">AWS · Docker · Kubernetes · Prometheus · CI/CD · Git</p>
+                </div>
+                <div>
+                    <p class="skill-group-label">Testing</p>
+                    <p class="skill-list">Jest · JUnit</p>
+                </div>
+            </div>
         </div>
-        <br>
-        <p><a href="others/resume.pdf" download class="btn" target="_blank">Download My Resume</a></p>
     </section>
 
-
-
-
-    <!-- Blog Section with Cards -->
-    <!-- <section id="blog" class="blog container">
-        <div class="section-header">
-            <h2>Articles</h2>
-            <button class="read-more-btn">Read More</button>
-        </div>
-        <div class="card-grid">
-            <div class="card">
-                <h3>Exploring the Intersection of Technology and Society</h3>
-                <p>In this essay, I delve into how emerging technologies are reshaping the way we live and work,
-                    discussing automation and AI.</p>
-            </div>
-            <div class="card">
-                <h3>The Role of Creativity in Problem-Solving</h3>
-                <p>This piece explores how creativity plays a crucial role in developing innovative solutions to complex
-                    challenges.</p>
-            </div>
-            <div class="card">
-                <h3>The Future of Innovation</h3>
-                <p>Looking ahead, I explore what the future holds for technological innovation and how we can prepare
-                    for the challenges it brings.</p>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact container">
-        <div class="contact-left">
-            <h2>GET IN TOUCH</h2>
-            <p>Have a project in mind or looking for collaboration opportunities? Let’s connect and explore the
-                possibilities together!</p>
-
-            <!-- Optional Contact Info Section -->
-            <div class="contact-info">
-                <div class="contact-tag">
-                    <!-- <img src="/path/to/icon.png" alt="Location Icon">s -->
-                    <span>Taipei, Taiwan</span>
+    <!-- Resume -->
+    <section id="resume" class="resume">
+        <div class="container">
+            <p class="section-label">EXPERIENCE</p>
+            <div class="resume-layout">
+                <h2>Work &amp;<br>Education</h2>
+                <div class="resume-body">
+                    <div class="resume-item">
+                        <p class="resume-item-label">Current — Kocree, Inc.</p>
+                        <p><strong>Full Stack System Architect Intern</strong> &nbsp;·&nbsp; Champaign, IL &nbsp;·&nbsp; 2026 – Present<br>
+                        Root-caused a multi-environment backend crash loop responsible for 150,000+ Kubernetes pod restarts. Architected system specifications for a 15-service polyglot monorepo with event-driven data pipelines using PostgreSQL, Debezium CDC, Kafka, and OpenSearch.</p>
+                    </div>
+                    <div class="resume-item">
+                        <p class="resume-item-label">HD Renewables Energy Co., Ltd</p>
+                        <p><strong>System Architect &amp; Project Manager</strong> &nbsp;·&nbsp; Taipei &nbsp;·&nbsp; 2024 – 2025<br>
+                        Designed a real-time big data platform ingesting 1,000+ Japanese energy market data points per minute. Improved system response time by 35% and throughput by 20% through Redis caching, database indexing, and Kubernetes-native load balancing. Led a 15-person Agile team with 100% on-time MVP delivery.</p>
+                    </div>
+                    <div class="resume-item">
+                        <p class="resume-item-label">HD Renewables Energy Co., Ltd</p>
+                        <p><strong>Full Stack Software Engineer</strong> &nbsp;·&nbsp; Taipei &nbsp;·&nbsp; 2023 – 2024<br>
+                        Architected RESTful APIs and web interfaces, cutting new data source integration time by 40%. Engineered automated scraping pipelines processing 100,000+ entries daily with 90% test coverage across frontend and backend.</p>
+                    </div>
+                    <div class="resume-item">
+                        <p class="resume-item-label">Education</p>
+                        <p><strong>M.S. Information Science</strong> &nbsp;·&nbsp; University of Illinois Urbana-Champaign &nbsp;·&nbsp; 2025 – 2027<br>
+                        Distributed Systems, Database Systems, Software Engineering, Cloud Computing.</p>
+                    </div>
+                    <a href="others/resume.pdf" download class="btn-outline">Download Resume</a>
                 </div>
-                <div class="contact-tag">
-                    <a href="mailto:chiawenli.1219@gmail.com">chiawenli.1219@gmail.com</a>
-                </div>
-                <!-- <div>
-                    <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> |
-                    <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
-                </div> -->
             </div>
         </div>
+    </section>
 
-        <!-- Contact Form -->
-        <div class="contact-form">
-            <form action="https://formsubmit.co/90ab2b3e626c853abcfea866bd7cda43" method="POST">
-                <div>
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <p class="section-label">CONTACT</p>
+            <div class="contact-layout">
+                <div class="contact-left">
+                    <h2>Get in<br>Touch</h2>
+                    <div class="contact-details">
+                        <p>Illinois, United States</p>
+                        <a href="mailto:chiawenli.1219@gmail.com">chiawenli.1219@gmail.com</a>
+                        <a href="https://linkedin.com/in/sabrinali1219" target="_blank">LinkedIn</a>
+                        <a href="https://github.com/5a6r1na" target="_blank">GitHub</a>
+                    </div>
                 </div>
-                <div>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <div class="contact-right">
+                    <form action="https://formsubmit.co/90ab2b3e626c853abcfea866bd7cda43" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+                        </div>
+                        <div class="contact-submit">
+                            <button type="submit" class="btn-submit">Send Message</button>
+                        </div>
+                    </form>
                 </div>
-                <div>
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="3" placeholder="Your Message" required></textarea>
-                </div>
-                <div class="contact-submit">
-                    <button type="submit">Submit</button>
-                </div>
-
-            </form>
+            </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Sabrina Li. All rights reserved.</p>
+        <div class="container footer-inner">
+            <span>© 2026 Sabrina Li. All rights reserved.</span>
+            <span>Illinois, United States</span>
+        </div>
     </footer>
-    <script language="javascript">
-        var mySwiper = document.querySelector('swiper-container');
 
-        // Set the custom navigation buttons using the "setAttribute" method
-        mySwiper.setAttribute('navigation-next-el', '.swiper-button-next-unique');
-        mySwiper.setAttribute('navigation-prev-el', '.swiper-button-prev-unique');
-
-        // Optionally, customize swiper further
-        mySwiper.autoplay = { delay: 4000 };
-        mySwiper.loop = true;
-
-        function updateSlidePerView() {
-            if (window.matchMedia("(max-width: 768px)").matches) {
-                mySwiper.setAttribute('slides-per-view', '1');
-            } else {
-                mySwiper.setAttribute('slides-per-view', '2');
-            }
-        }
-
-        // Run on window resize
-        window.addEventListener('resize', function () {
-            updateSlidePerView()
-        }
-        );
-
-        updateSlidePerView()
-    </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <script type="text/javascript" src="/personal-site/script.js"></script>
-
 </body>
 
 </html>
