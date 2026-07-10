@@ -149,14 +149,15 @@ header nav {
 }
 
 .hero-image {
-  width: 340px;
+  width: 480px;
   flex-shrink: 0;
 }
 
 .hero-image img {
   width: 100%;
-  aspect-ratio: 1;
-  object-fit: cover;
+  aspect-ratio: 16/9;
+  object-fit: contain;
+  background: #0A0A0A;
   display: block;
   filter: grayscale(10%);
 }
