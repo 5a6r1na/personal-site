@@ -92,7 +92,7 @@ header nav {
 
 .hero-inner {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: 60px;
 }
@@ -149,7 +149,7 @@ header nav {
 }
 
 .hero-image {
-  width: 480px;
+  width: 550px;
   flex-shrink: 0;
 }
 
