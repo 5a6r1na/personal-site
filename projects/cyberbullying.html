@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Cyberbullying Detection Agent — Sabrina Li</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">↑</button>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="../index.html" class="nav-logo">SABRINA LI</a>
+                <div class="nav-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../index.html#projects">Projects</a>
+                    <a href="../index.html#contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Project Hero -->
+    <section class="projects-hero">
+        <div class="container">
+            <p class="hero-label" style="padding-top:0; margin-bottom:16px;">PROJECT 03</p>
+            <div class="hero-left">
+                <h1>AI Cyberbullying Detection Agent</h1>
+            </div>
+            <div class="hero-right">
+                <p>A two-stage AI pipeline that detects cyberbullying in real time and generates culturally aware, age-calibrated interventions — moving beyond content moderation toward empathetic, preventative support.</p>
+            </div>
+            <div style="margin-top: 20px; display: flex; gap: 12px; flex-wrap: wrap;">
+                <a class="visit-site-btn" href="https://github.com/5a6r1na/cyberbullying" target="_blank">GitHub →</a>
+                <a class="visit-site-btn" href="../others/cyberbullying-report.pdf" target="_blank">View Report →</a>
+            </div>
+
+            <!-- Metadata Row -->
+            <div class="project-meta">
+                <div class="meta-item">
+                    <p class="meta-label">Role</p>
+                    <p class="meta-value">AI Engineer &<br>Full-Stack Developer</p>
+                </div>
+                <div class="meta-item">
+                    <p class="meta-label">Stack</p>
+                    <p class="meta-value">Python · Node.js<br>Vue.js · Firebase · GPT-4o</p>
+                </div>
+                <div class="meta-item">
+                    <p class="meta-label">Type</p>
+                    <p class="meta-value">AI / LLM<br>Research Project</p>
+                </div>
+                <div class="meta-item">
+                    <p class="meta-label">Context</p>
+                    <p class="meta-value">UIUC IS 504<br>Aug – Dec 2025</p>
+                </div>
+            </div>
+
+            <div class="project-nav" style="margin-top: 24px;">
+                <span class="sections-label">Sections:</span>
+                <a href="#background" class="project-tag">Background</a>
+                <a href="#design" class="project-tag">Design</a>
+                <a href="#implementation" class="project-tag">Implementation</a>
+                <a href="#results" class="project-tag">Results</a>
+                <a href="#closing" class="project-tag">Closing</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Background -->
+    <section id="background" class="section story container">
+        <div class="section-title">
+            <h2>Background</h2>
+        </div>
+        <p>Most cyberbullying tools react after harm has already occurred — flagging or removing content without addressing the behavior behind it. For young people who spend significant time on digital platforms, this reactive approach leaves the root causes unresolved.</p>
+        <p>This project explored a different framing: instead of punishment, could an AI system intervene in the moment and redirect aggressors through empathy, education, and reflection? And to do that effectively, could it account for the cultural and demographic context of the person it's speaking to?</p>
+        <p>The research question driving the project: how can a culturally aware language model be designed to identify and intervene in cyberbullying scenarios in a way that is both preventative and empathetic?</p>
+    </section>
+
+    <!-- Design -->
+    <section id="design" class="section story container">
+        <div class="section-title">
+            <h2>Design</h2>
+        </div>
+
+        <p>The system is organized into three layers that work together to understand the user, respond thoughtfully, and remain accountable.</p>
+
+        <div style="margin-top: 32px;">
+            <p class="resume-item-label" style="margin-bottom: 10px;">CONTEXT-ENRICHMENT LAYER</p>
+            <p>Collects the user's message alongside basic demographic context — age and ethnicity — entered before the chat begins. This gives the model situational awareness: who is involved, what is being said, and the potential risk level. The cyberbullying classifier runs here first, identifying whether the message is harmful and, if so, what type (age-based, ethnicity-based, gender-based, religion-based, or other).</p>
+        </div>
+
+        <div style="margin-top: 32px;">
+            <p class="resume-item-label" style="margin-bottom: 10px;">CULTURAL ATTUNEMENT & EMPATHY LAYER</p>
+            <p>Once a message is classified, this layer determines how to respond. Prompt engineering guides the model's tone, framing, and intervention type based on context and severity. Depending on the situation, the model can respond in four ways: reflective prompting for low-severity cases, resource redirection for context-specific offenses, empathy reframing for moderate-to-high severity, or a cooldown pause for repeated or escalating behavior.</p>
+        </div>
+
+        <div style="margin-top: 32px;">
+            <p class="resume-item-label" style="margin-bottom: 10px;">HUMAN-IN-THE-LOOP LAYER</p>
+            <p>After each AI response, users rate the interaction on five dimensions: perceived empathy, cultural sensitivity, helpfulness, trust and safety, and personal experience. This feedback loop keeps the system grounded in real human judgment and provides structured data for continuous improvement rather than relying on automation alone.</p>
+        </div>
+    </section>
+
+    <!-- Implementation -->
+    <section id="implementation" class="section story container">
+        <div class="section-title">
+            <h2>Implementation</h2>
+        </div>
+        <p>The prototype is a deployed web application with a two-stage chat interface. Development involved four stages: data preparation, model training, prompt engineering, and human validation.</p>
+        <ul>
+            <li><strong>Dataset:</strong> 47,000+ labeled Twitter posts from the Cyberbullying Classification dataset on Kaggle, covering six categories — age, ethnicity, gender, religion, other cyberbullying, and not cyberbullying. Preprocessed into JSONL format for fine-tuning.</li>
+            <li><strong>Classifier:</strong> GPT-4o fine-tuned via OpenAI's API on the processed dataset to classify incoming messages by bullying type. Structured outputs enforced via OpenAI's JSON schema response format, keeping classification and generation as independently configurable, testable components.</li>
+            <li><strong>Response generation:</strong> A GPT-4o-mini reasoning layer takes the classification output and user demographics and generates a tailored intervention. Prompts enforce cultural neutrality, age-appropriate tone, and non-judgmental framing, with curated support resources surfaced for context-specific offenses.</li>
+            <li><strong>Frontend:</strong> Vue.js chat interface deployed on Firebase, with a pre-chat demographic input screen feeding context into the backend before the session begins.</li>
+        </ul>
+    </section>
+
+    <!-- Results -->
+    <section id="results" class="section story container">
+        <div class="section-title">
+            <h2>Results</h2>
+        </div>
+        <p>The evaluation used A/B testing — comparing the culturally tuned model against a base GPT model — measured across five user-rated dimensions.</p>
+        <ul>
+            <li><strong>Unexpected finding:</strong> The untuned base model outperformed the fine-tuned version across most dimensions, particularly cultural sensitivity (4.5 vs. 3.5) and perceived empathy (3.75 vs. 3.37). Users found the base model's responses more natural and relatable despite being more generic.</li>
+            <li><strong>Trust and safety</strong> scored highest in both versions (4.0 and 4.16 respectively), suggesting the overall system design was perceived as safe and non-judgmental regardless of tuning.</li>
+            <li><strong>Root cause analysis:</strong> The tuned model's underperformance likely stemmed from limited training data, high OpenAI API fine-tuning costs constraining dataset size to under 5% of available data, and prompting that was calibrated for younger teens but tested with university students.</li>
+        </ul>
+        <p>The results reframed how the team thought about cultural tuning: it is not sufficient on its own without stronger human feedback loops, larger representative datasets, and more flexible prompting boundaries.</p>
+    </section>
+
+    <!-- Closing -->
+    <section id="closing" class="section story container">
+        <div class="section-title">
+            <h2>Closing</h2>
+        </div>
+        <p>The project demonstrated that LLM-based cyberbullying intervention is technically feasible and perceived as trustworthy by users, but that cultural adaptation requires more than fine-tuning alone. The gap between a tuned and untuned model points toward future work on RLHF strategies, richer training data, and more nuanced prompt design across age groups.</p>
+        <p>More broadly, the system validates the idea that AI can play a genuinely supportive role in online safety — not just detecting harm, but actively fostering reflection and empathy at the moment it matters most.</p>
+    </section>
+
+    <footer>
+        <div class="container footer-inner">
+            <span>© 2026 Sabrina Li. All rights reserved.</span>
+            <span>Illinois, United States</span>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="../script.js"></script>
+</body>
+
+</html>
