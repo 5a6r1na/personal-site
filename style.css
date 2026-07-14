@@ -210,10 +210,60 @@ header nav {
   padding-bottom: 80px;
 }
 
-.projects-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.section-header .section-label {
+  margin-bottom: 0;
+}
+
+.carousel-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.carousel-btn {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--black);
+  background: transparent;
+  color: var(--black);
+  cursor: pointer;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.carousel-btn:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+.projects-carousel {
+  overflow: hidden;
   border: 1px solid var(--border);
+  background: var(--border);
+}
+
+.projects-track {
+  display: flex;
+  gap: 1px;
+  background: var(--border);
+  transition: transform 0.45s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.projects-track .card {
+  min-width: calc(50% - 0.5px);
+  flex-shrink: 0;
+  border: none;
 }
 
 .card {
@@ -962,7 +1012,7 @@ input:checked + .slider:before {
   .resume-layout h2,
   .contact-left h2 { font-size: 2.2em; max-width: 100%; }
 
-  .projects-grid { grid-template-columns: 1fr; }
+  .projects-track .card { min-width: calc(100% - 0.5px); }
 
   .skills-grid { grid-template-columns: 1fr; gap: 24px; }
 

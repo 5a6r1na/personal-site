@@ -63,56 +63,118 @@
     <!-- Projects -->
     <section id="projects" class="projects">
         <div class="container">
-            <p class="section-label">PROJECTS</p>
-            <div class="projects-grid">
-                <div class="card">
-                    <div class="project-number">01</div>
-                    <h3>Eat Together</h3>
-                    <div class="project-tags">
-                        <span class="project-tag">Full-Stack</span>
-                        <span class="project-tag">System Design</span>
-                        <span class="project-tag">Web Design</span>
-                        <span class="skill-tag">Vue.js</span>
-                        <span class="skill-tag">Firebase</span>
-                    </div>
-                    <p>Collaborated with NGOs and the Taichung City Government to address resource wastage and uneven distribution for the homeless community. Recognized by local governmental bodies for its potential to shape public policy.</p>
-                    <div class="card-links">
-                        <a class="card-link" href="projects/eat-together.html">Case Study →</a>
-                        <a class="card-link" href="https://www.eat-together.homestreethometc.com/" target="_blank">Visit Site →</a>
-                    </div>
+            <div class="section-header">
+                <p class="section-label">PROJECTS</p>
+                <div class="carousel-controls">
+                    <button class="carousel-btn" id="projectPrev">←</button>
+                    <button class="carousel-btn" id="projectNext">→</button>
                 </div>
-                <div class="card">
-                    <div class="project-number">02</div>
-                    <h3>Dream Support</h3>
-                    <div class="project-tags">
-                        <span class="project-tag">Full-Stack</span>
-                        <span class="project-tag">System Design</span>
-                        <span class="project-tag">Web Design</span>
-                        <span class="skill-tag">Vue.js</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">PostgreSQL</span>
+            </div>
+            <div class="projects-carousel">
+                <div class="projects-track" id="projectsTrack">
+                    <!-- Clone of card 3 (for prev looping) -->
+                    <div class="card clone">
+                        <div class="project-number">03</div>
+                        <h3>AI Cyberbullying Detection Agent</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">AI / LLM</span>
+                            <span class="project-tag">System Design</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">GPT-4o</span>
+                            <span class="skill-tag">Vue.js</span>
+                            <span class="skill-tag">Firebase</span>
+                        </div>
+                        <p>Fine-tuned GPT-4o to detect and classify cyberbullying across cultural contexts, paired with a reasoning layer that generates age-calibrated, empathetic interventions for aggressors in real time.</p>
+                        <div class="card-links">
+                            <a class="card-link" href="projects/cyberbullying.html">Case Study →</a>
+                            <a class="card-link" href="https://github.com/5a6r1na/cyberbullying" target="_blank">GitHub →</a>
+                            <a class="card-link" href="others/cyberbullying-report.pdf" target="_blank">Report →</a>
+                        </div>
                     </div>
-                    <p>Scalable case management platform enabling faster, personalized assistance for 1,000+ active cases across 32 NGOs. Data-driven recommendations empower social workers to make more informed decisions.</p>
-                    <div class="card-links">
-                        <a class="card-link" href="projects/dream-support.html">Case Study →</a>
+                    <!-- Real cards -->
+                    <div class="card">
+                        <div class="project-number">01</div>
+                        <h3>Eat Together</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Full-Stack</span>
+                            <span class="project-tag">System Design</span>
+                            <span class="project-tag">Web Design</span>
+                            <span class="skill-tag">Vue.js</span>
+                            <span class="skill-tag">Firebase</span>
+                        </div>
+                        <p>Collaborated with NGOs and the Taichung City Government to address resource wastage and uneven distribution for the homeless community. Recognized by local governmental bodies for its potential to shape public policy.</p>
+                        <div class="card-links">
+                            <a class="card-link" href="projects/eat-together.html">Case Study →</a>
+                            <a class="card-link" href="https://www.eat-together.homestreethometc.com/" target="_blank">Visit Site →</a>
+                        </div>
                     </div>
-                </div>
-                <div class="card">
-                    <div class="project-number">03</div>
-                    <h3>AI Cyberbullying Detection Agent</h3>
-                    <div class="project-tags">
-                        <span class="project-tag">AI / LLM</span>
-                        <span class="project-tag">System Design</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">GPT-4o</span>
-                        <span class="skill-tag">Vue.js</span>
-                        <span class="skill-tag">Firebase</span>
+                    <div class="card">
+                        <div class="project-number">02</div>
+                        <h3>Dream Support</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Full-Stack</span>
+                            <span class="project-tag">System Design</span>
+                            <span class="project-tag">Web Design</span>
+                            <span class="skill-tag">Vue.js</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                        </div>
+                        <p>Scalable case management platform enabling faster, personalized assistance for 1,000+ active cases across 32 NGOs. Data-driven recommendations empower social workers to make more informed decisions.</p>
+                        <div class="card-links">
+                            <a class="card-link" href="projects/dream-support.html">Case Study →</a>
+                        </div>
                     </div>
-                    <p>Fine-tuned GPT-4o to detect and classify cyberbullying across cultural contexts, paired with a reasoning layer that generates age-calibrated, empathetic interventions for aggressors in real time.</p>
-                    <div class="card-links">
-                        <a class="card-link" href="projects/cyberbullying.html">Case Study →</a>
-                        <a class="card-link" href="https://github.com/5a6r1na/cyberbullying" target="_blank">GitHub →</a>
-                        <a class="card-link" href="others/cyberbullying-report.pdf" target="_blank">Report →</a>
+                    <div class="card">
+                        <div class="project-number">03</div>
+                        <h3>AI Cyberbullying Detection Agent</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">AI / LLM</span>
+                            <span class="project-tag">System Design</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">GPT-4o</span>
+                            <span class="skill-tag">Vue.js</span>
+                            <span class="skill-tag">Firebase</span>
+                        </div>
+                        <p>Fine-tuned GPT-4o to detect and classify cyberbullying across cultural contexts, paired with a reasoning layer that generates age-calibrated, empathetic interventions for aggressors in real time.</p>
+                        <div class="card-links">
+                            <a class="card-link" href="projects/cyberbullying.html">Case Study →</a>
+                            <a class="card-link" href="https://github.com/5a6r1na/cyberbullying" target="_blank">GitHub →</a>
+                            <a class="card-link" href="others/cyberbullying-report.pdf" target="_blank">Report →</a>
+                        </div>
+                    </div>
+                    <!-- Clone of card 1 (for next looping) -->
+                    <div class="card clone">
+                        <div class="project-number">01</div>
+                        <h3>Eat Together</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Full-Stack</span>
+                            <span class="project-tag">System Design</span>
+                            <span class="project-tag">Web Design</span>
+                            <span class="skill-tag">Vue.js</span>
+                            <span class="skill-tag">Firebase</span>
+                        </div>
+                        <p>Collaborated with NGOs and the Taichung City Government to address resource wastage and uneven distribution for the homeless community. Recognized by local governmental bodies for its potential to shape public policy.</p>
+                        <div class="card-links">
+                            <a class="card-link" href="projects/eat-together.html">Case Study →</a>
+                            <a class="card-link" href="https://www.eat-together.homestreethometc.com/" target="_blank">Visit Site →</a>
+                        </div>
+                    </div>
+                    <!-- Clone of card 2 (for next looping) -->
+                    <div class="card clone">
+                        <div class="project-number">02</div>
+                        <h3>Dream Support</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Full-Stack</span>
+                            <span class="project-tag">System Design</span>
+                            <span class="project-tag">Web Design</span>
+                            <span class="skill-tag">Vue.js</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                        </div>
+                        <p>Scalable case management platform enabling faster, personalized assistance for 1,000+ active cases across 32 NGOs. Data-driven recommendations empower social workers to make more informed decisions.</p>
+                        <div class="card-links">
+                            <a class="card-link" href="projects/dream-support.html">Case Study →</a>
+                        </div>
                     </div>
                 </div>
             </div>
