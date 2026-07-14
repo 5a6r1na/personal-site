@@ -261,7 +261,6 @@ header nav {
 }
 
 .projects-track .card {
-  min-width: calc(50% - 0.5px);
   flex-shrink: 0;
   border: none;
 }
@@ -1012,7 +1011,7 @@ input:checked + .slider:before {
   .resume-layout h2,
   .contact-left h2 { font-size: 2.2em; max-width: 100%; }
 
-  .projects-track .card { min-width: calc(100% - 0.5px); }
+  .projects-carousel { --cards-visible: 1; }
 
   .skills-grid { grid-template-columns: 1fr; gap: 24px; }
 

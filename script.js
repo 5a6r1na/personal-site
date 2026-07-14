@@ -23,16 +23,32 @@ function scrollToTop() {
 // Projects carousel
 const projectsTrack = document.getElementById('projectsTrack');
 if (projectsTrack) {
-  // Track order: [C3-clone][C1][C2][C3][C1-clone][C2-clone]
-  // Start at index 1 so C1+C2 are visible
+  const carousel = projectsTrack.closest('.projects-carousel');
   let currentIndex = 1;
   let isTransitioning = false;
   const TOTAL = 3;
+  const GAP = 1;
+
+  function isMobile() {
+    return window.innerWidth <= 768;
+  }
+
+  function cardsVisible() {
+    return isMobile() ? 1 : 2;
+  }
+
+  function setCardWidths() {
+    var n = cardsVisible();
+    var carouselWidth = carousel.offsetWidth;
+    var cardWidth = Math.floor((carouselWidth - GAP * (n - 1)) / n);
+    projectsTrack.querySelectorAll('.card').forEach(function(card) {
+      card.style.width = cardWidth + 'px';
+    });
+  }
 
   function getSlotWidth() {
-    const card = projectsTrack.querySelector('.card');
-    // gap is 1px between cards
-    return card.offsetWidth + 1;
+    var card = projectsTrack.querySelector('.card');
+    return card.offsetWidth + GAP;
   }
 
   function moveTo(index, animate) {
@@ -43,20 +59,24 @@ if (projectsTrack) {
     currentIndex = index;
   }
 
-  // Set initial position without animation
-  moveTo(1, false);
+  function init() {
+    setCardWidths();
+    moveTo(1, false);
+  }
+
+  init();
+  window.addEventListener('resize', function() {
+    setCardWidths();
+    moveTo(currentIndex, false);
+  });
 
   document.getElementById('projectNext').addEventListener('click', function () {
     if (isTransitioning) return;
     isTransitioning = true;
     var next = currentIndex + 1;
     moveTo(next, true);
-    // If we've gone past real cards into clones, snap back
     if (next >= TOTAL + 1) {
-      setTimeout(function () {
-        moveTo(1, false);
-        isTransitioning = false;
-      }, 450);
+      setTimeout(function () { moveTo(1, false); isTransitioning = false; }, 450);
     } else {
       setTimeout(function () { isTransitioning = false; }, 450);
     }
@@ -67,12 +87,8 @@ if (projectsTrack) {
     isTransitioning = true;
     var prev = currentIndex - 1;
     moveTo(prev, true);
-    // If we've gone to the clone before real cards, snap to end
     if (prev <= 0) {
-      setTimeout(function () {
-        moveTo(TOTAL, false);
-        isTransitioning = false;
-      }, 450);
+      setTimeout(function () { moveTo(TOTAL, false); isTransitioning = false; }, 450);
     } else {
       setTimeout(function () { isTransitioning = false; }, 450);
     }
